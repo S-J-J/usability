@@ -1,0 +1,1988 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usability</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper logo"></div>
+    </nav>
+    <header>
+        <h1 class="invert">Usability & Heuristic Guidelines</h1>
+    </header>
+       
+
+    <section class="homepage">
+        <h2>Homepage</h2>
+
+    
+
+
+
+    </section>
+
+    <section class="search">
+        <h2>Search</h2>
+    </section>
+
+    <section class="plp">
+        <h2>Product List Page</h2>
+  
+    </section>
+
+    <section class="pdp">
+        <h2>Product Detail Page</h2>
+  
+    </section>
+
+
+    <section class="basket">
+        <h2>Basket</h2>
+<button class="accordion">Added to basket behaviour (9)</button>
+<div class="panel">
+
+  <button class="accordion">#600: ‘Added to basket' pop-up should only have 3-Level Information Hierarchy<span class="priority">Essential</span></button>
+  <div class="panel">
+  <p>ISSUE: Users can be misled or disrupted by overlays without a clear focus on the confirmation of their actions and the next steps.
+  </p>
+  <p>
+    RECOMMENDATION: The information hierachy should be:
+   <ol>
+     <li>Confirmation and visual indication of added to Basket</li>
+     <li>Next options: Continue shopping, View basket & Checkout</li>
+     <li>Complimentary and relevant cross-sell (optional)</li>
+    </ol>
+  </p>
+<img src="img/600.jpg">
+  </div>
+
+  <button class="accordion">#601: If using a drop-down basket, be very cautious about its interactive states<span class="priority impactful">Impactful</span></button>
+  <div class="panel">
+    <p>ISSUE: A drop-down basket preview can be disruptive if minimized before the user can process and act on its information.
+    </p>
+    <p>A dropdown basket can make a user aware when an item has been added to their basket, but not explicitly asked to make a choice between 'continue shopping' or 'checkout now'. Basket drop-downs can be helpful to let users know how to proceed forward.
+    </p>
+    <p>
+      RECOMMENDATIONS:
+     <ol>
+      <li>Keep the drop-down basket permanently visible as long as users hover over the content.</li>
+      <li>When users hover off the drop-down basket, have an exit delay of 300-500ms, to give users a chance to move the cursor back</li>
+      <li>Have a good amount of padding on interactive options and avoid positioning too close to the edge</li>
+       <li>If basket drop-down is auto-triggered after an item is 'added', if it auto-dismisses, have a minimum 7 second delay before it is auto-dismissed.</li>
+       <li>Inline scrollable areas should be avoided in drop-down baskets. Instead, link to the basket to see overview of all items. Show only the just-added item but with clear indication of total cart value, quantity and a clear link for 'View basket'</li>
+       <li>Allow drop-down basket to re-open </li>
+      </ol>
+    </p>
+    <img src="img/601.jpg">
+  </div>
+
+  <button class="accordion">#602: Be cautious using a separate 'in-between page' after users add items to basket<span class="priority impactful">Impactful</span></button>
+  <div class="panel">
+  <p>ISSUE: Users often mistake a separate in-between page displayed before the basket for an inadequate basket. 
+  </p>
+  <p>Users may not be ready to checkout after adding an item to their basket. It is best not to redirect users to other pages. Keeping the user on the Product Detail Page, or Product List Page performs better. When landing on a new page, users expect and mis-interpet it to be the basket page. 
+  </p>
+  <p>RECOMMENDATION 1: Keep users on the same page after 'adding to basket'. Immediately either have an 'added to basket' overlay or drop-down basket. 
+  </p>
+  <p>RECOMMENDATION 2: Do not have a separate page after adding to basket as this interupts the user's experience
+  </p>
+  <p>RECOMMENDATION 3: If having a separate page, there should be:
+    <ol>
+      <li>Clear visual indication and confirmatory messaging of 'Added to basket' for clarity (tick, green font colour for header, item with the price and thumbnail</li>
+      <li>Clear visual empahsis on the primary paths to proceeding (ie. Shop more, View basket, Checkout now) </li>
+      <li>If including cross-sell items, do not distract or obstruct the primary priority paths. Only have cross-sell items if they are relevant. If not relevant, do not have.</li>
+    </ol>
+  </p>
+  <img src="img/602.jpg">
+  </div>
+
+  <button class="accordion">#603: Set strict design requirements if allowing users to skip the basket and go straight to checkout<span class="priority impactful">Impactful</span></button>
+  <div class="panel">
+  <p>ISSUE: “Checkout Now” buttons shown before the cart cause some users to mistakenly skip the cart step, and thereby lack crucial order information, like total cost and the ability to modify their order.
+  </p>
+  <p>
+  Allowing users to skip basket straight to checkout can be helpful for users who know exactly what they want, and they understand the differences between 'basket' and 'checkout'. For users who thought the next path would be 'basket', it can be problematic. 
+  </p>
+  <p>RECOMMENDATIONS:
+    <ol>
+      <li>Include a 'View basket' option next to 'checkout' option</li>
+      <li>Avoid styling to nudge users to checkout and skip basket</li>
+      <li>Avoid starting button labels with 'Continue' or 'Proceed'. Better performing labels are "View basket" and "Checkout now"</li>
+    </ol>
+  </p>
+  <img src="img/603.jpg">
+  </div>
+
+  <button class="accordion">#732: Provide total order cost, or an estimate, in the basket<span class="priority">Essential</span></button>
+  <div class="panel">
+  <p>ISSUE: Users want to know, or at least have an idea about, the total order cost before they have to fill out multiple form fields in later steps.
+  </p>
+<p>  When users do not understand how much they will have to pay for their order in total, they are reluctant to proceed to checkout. It can be very frustrating to only find the total amount at the end of the checkout if the total cost is too much (with added delivery cost or additional fees). Only showing order total at the end can result in abandonments and a negative perception of the site - 'tricking' users by showing an initial cheaper cost. 18% of users typically abandon because they couldnt see total order cost upfront before proceeding to checkout.</p>
+<p>RECOMMENDATIONS:
+  <ol>
+    <li>Display an actual delivery cost if a fixed-rate or free</li>
+    <li>If delivery cost varies, show an estimated delivery cost from the most popular slot. If using an estimate, it is good practice to use a tooltip or more information explaining what the estimate is based on.</li>
+    <li>Display a price range from lowest possible delivery cost. "Delivery cost: £1-£4"</li>
+    <li>If the basket qualifies for free delivery, explicitly state how they have met all conditions. Users want reassurance of seeing total order cost with free delivery. If there are spending tiers to qualify for free delivery, these should display automatically when the spend is reached</li>
+   
+  </ol>
+</p>
+<img src="img/732.jpg">
+  </div>
+
+  <button class="accordion">#620: Support that some users will use the basket as a comparison & storage tool<span class="priority">Essential</span></button>
+  <div class="panel">
+  <p>ISSUE: Users sometimes use their basket to compare and store products, but many will find it difficult to use the basket to review items if it’s not optimised for comparison.
+  </p>
+  <p>Often users behaviour on ecommerce is non-linear as they find, review and purchase products. Many users use the basket as a 'temporary storage and comparison' tool. Only users who are completely predetermined (know what exactly what single product they need) will have a linear path from Product Detail Page to Checkout. For products with a lot of variants, customers go back and forth from Product List Page, to Product Detail Pages, to consider their options.
+  </p>
+  <p>Up to 25% of users will add items to their basket, without the intent to purchase all of them - but to compare them in basket later. The basket will effectively double as a 'Save' or 'Wishlist' feature. 22% of users use basket as somewhere to 'Save' items, compared to 7% who used site-provided 'Save' features. 
+  </p>
+  <p>RECOMMENDATIONS:
+    <ol>
+      <li>Provide large thumbnails in the basket for easier visual inspectation and comparison</li>
+      <li>Include key product specifications and in the basket - Price, Product title, Product Variation, Thumbnail, Ratings (optional) </li>
+      <li>Provide a link back to the Product Detail Page, by clicking the Product title or thumbnail </li>
+      <li>Persist basket contents so the basket doubles as a 'Save' feature</li>
+      <li>Consider allowing users to see variations and make direct changes in the basket (ie. Size and colour). This implemented well with an 'Edit' button that opens an overlay</li>
+      <li>(Optional) on mobile, support the behaviour of continuing shop on another device with sending the saved basket to an email address. Any basket content should be in sync if signed in on multile devices.</li>
+    </ol>
+  </p>
+  <img src="img/620.jpg">
+  </div>
+
+  <button class="accordion">#623: Autoupdate basket quantity changes instantly and allow quantity 0 to remove<span class="priority">Essential</span></button>
+  <div class="panel">
+  <p>ISSUE: After setting a new quantity, users often overlook if they have to click anything else. Users assume quantity changes are autosaved, and if quantity is 0, the item would be removed.</p>
+  <p>Users can have the need to change quantity in the basket for a number of reasons - accidentally adding twice, deciding cost is too much, or decided they need more.</p>
+  <p>RECOMMENDATIONS:
+    <ol>
+      <li>Do not require users to click "Update" after changing product quantity in basket. Users will overlook the update button</li>
+      <li>Update any quantity changes by autoupdating as soon as the value is changed.</li>
+      <li>Once a new quanity is entered, the basket summary and order total must update immediately.</li>
+      <li>If the item is set to quanity=0, this should remove the item from basket. Follow the mental model of 'quantity 0 = delete'</li>
+
+    </ol>
+  </p>
+
+  <img src="img/623.jpg">
+  <img src="img/623a.jpg">
+  </div>
+
+  <button class="accordion">#622: Allow users to ‘Save for later’ basket items, and place saved items on basket page<span class="priority">Essential</span></button>
+  <div class="panel">
+  <p>ISSUE: Sometimes users want to go ahead with a purchase, but also want to retain some basket items that are ‘interesting, but not for today’.
+  </p>
+  <p>25% of users use basket as for temporary storage and comparison of items - without the intent of immediately buying. Saving for later is a better option than 'remove from basket'.  
+  </p>
+  <p>
+    RECOMMENDATION 1: Users expect the 'save' feature to be a basket feature - not a separate page. Have 'saved for later' items on basket page in a section. When users are on basket page, their saved items from a previous session should be there.
+    Have some visual indication after an item has been selected as 'Save for later'. Have a link above the fold to the "Save for later" section on the basket
+   </p>
+   <p>
+    RECOMMENDATION 2: Have a clear title for the "Saved items" section, such as "Saved for later (4)". Have clear actions on the items for "Move to basket" or "Delete"
+   </p>
+   <p>
+    RECOMMENDATION 3: 'Save for later' should be for Guest and Registered users. Use a cookie to store saved items for guest users. When a user signs in, do not 'forget' their saved items. Guest saved items should be merged in with Signed in. 
+   </p>
+   <img src="img/622.jpg">
+  </div>
+
+  <button class="accordion">#673: Display only static logos for payment options in the basket<span class="priority">Essential</span></button>
+  <div class="panel">
+    <p>ISSUE: Users are distracted by 3rd party payment buttons displayed at the cart step.
+    </p>
+    <p>
+     RECOMMENDATION: Display payment options in basket as static images instead of buttons. These indicate to users the payment options available later in checkout.
+    </p>
+  <img src="img/673.jpg">
+  </div>
+</div>
+    </section>
+
+    <section class="checkout">
+        <h2>Checkout</h2>
+        <button class="accordion">Account selection & creation (9)</button>
+       <div class="panel">
+        <button class="accordion">#637: Provide a 'guest checkout' option<span class="priority">Essential</span></button>
+        <div class="panel">
+        <p>ISSUE: Users are very hostile towards being forced to sign up for an account in order to place an order.
+        </p>
+        <p>28% of users typically abandon checkout due to forced account creation. Account creation is perceived to be significantly slower than guest checkout, as there are more form fields to fill. Extra effort is placed on the user to create and remember another account. Users also have a strong mental model of account creation = sent marketing material. Without forced account creation and providing guest checkout, websites tend to see a conversion rate improvement of 10-30%.
+        </p>
+        <p>
+          RECOMMENDATION:
+         <ol>
+           <li>Offer a guest checkout option for new users, and a sign-in option for returning</li>
+           <li>Create a 'delayed account creation' and present the account-creation option at the confirmation step (after order has been placed). With detailed benefits of creating an account.</li>
+           <li>Prominently display a guest checkout option on the account-selection step</li>
+          </ol>
+        </p>
+      
+      <img src="img/637.jpg">
+      
+        </div>
+
+
+        <button class="accordion">#652: Make 'guest checkout' the most prominent option<span class="priority">Essential</span></button>
+        <div class="panel">
+        <p>ISSUE: Not being able to find guest checkout is as severe as if it wasn’t offered at all.
+        </p>
+        <p>If users can not easily see a guest checkout option, they will overlook and conclude no option exists. The design and position of the guest checkout option is essential. Users tend to interact with site elements that are placed in the upper left-hand portion of the interface more. On mobile, it is common for the guest checkout option to be overlooked if not in the viewport.
+        </p>
+        <p>
+          RECOMMENDATION:
+         <ol>
+           <li>Offer a guest checkout option as the first choice and in the viewport</li>
+           <li>Provide a clear path forward. Have a clear label to 'Guest checkout'. Avoid using a combined form to create an account or guest checkout, as this implies you need to add details before</li>
+           <li>Place Guest checkout option to the left, or above of other account options. Use two options like: "Checkout as Guest" "Sign in to my account"</li>
+          </ol>
+        </p>
+      <img src="img/652.jpg">
+        </div>
+
+        <button class="accordion">#639: Social media account selection should be mindful of privacy permissions and secondary<span class="priority">Essential</span></button>
+        <div class="panel">
+        <p>ISSUE: When faced with sign in options for social media accounts users seldom see them as primary options, and also often speculate if they grant the site permission to post.
+        </p>
+        <p>10% of ecommerce sites have a social media sign in option. If there is a social media sign in, it should be separated from the traditional email-based account creation. Users have privacy concerns when granting access, or dont trust sharing data.
+        </p>
+        <p>
+          RECOMMENDATION:
+         <ol>
+           <li>Traditional email-based account creation should come first, before social sign in options</li>
+           <li>Be transparent 'what will we have access to'. Explain if this is only as a shortcut to account creation and not posting messages on their behalf</li>
+        
+          </ol>
+        </p>
+      <img src="img/639.jpg">
+        </div>
+
+
+        <button class="accordion">#677: Have minimal password creation requirements<span class="priority">Essential</span></button>
+        <div class="panel">
+        <p>ISSUE: Strict password rules cause users to forget their password, and are prone to cause users to abandon their purchase when they try to reset their password.
+        </p>
+        <p>Strict password rules can cause up to an 18% checkout abandonment for existing customers when signing in. Users make the distinction between needed high security for accounts like banking. Users often re-use passwords across websites.
+        </p>
+        <p>
+          RECOMMENDATION:
+         <ol>
+           <li>Display all password creation requirements upfront</li>
+           <li>Dont impose a too strict password requirement. 6-8 characters</li>
+           <li>Have a password-attempt limitation to prevent hackers having unlimited attempts to sign in</li>
+           <li>Do not allow users to pay with a saved payment card if delivering to a different address. If dellivering to a different address, the user should re-enter the payment details.</li>
+           <li>Allow long passwords (20+ characters) for security-concious users who prefer longer passwords</li>
+        
+          </ol>
+        </p>
+      <img src="img/677.jpg">
+        </div>
+
+
+
+        <button class="accordion">#638: Save account creation for the confirmation step<span class="priority">Essential</span></button>
+        <div class="panel">
+        <p>ISSUE: Even optional account creation may cause distractions and friction during the checkout flow, and significantly limit any persuasive techniques.
+        </p>
+        <p>While users should always be allowed to checkout as a guest, having an optional account-creation option is often appreciated by users. By having account creation later, checkout is far more efficient for new users with less form fields.
+        </p>
+        <p>
+          RECOMMENDATION:
+         <ol>
+           <li>Have an optional account creation option in the guest checkout flow in the confirmation step after checkout.</li>
+           <li>Account creation on the confirmation step usually only involves creating a password (given the user has entered necessary information during checkout</li>
+           <li>On the confirmation step, after checkout, communicate the benefits of creating an account</li>
+           <li>When saving account creation for the confirmation step, ensure users are informed they can create an account later at the end of checkout</li>
+          </ol>
+        </p>
+      <img src="img/638.jpg">
+        </div>
+
+
+        <button class="accordion">#653: Tweak the microcopy for the account selection interface<span class="priority">Essential</span></button>
+        <div class="panel">
+        <p>ISSUE: Imprecise or generic microcopy on the account selection step will mislead users.
+        </p>
+        <p>36% of sites do not make the distinctions clear between account options in the microcopy. Many users are slowed down if they try to figure out how to correctly interpret the interface.
+        </p>
+        <p>
+          RECOMMENDATION:
+         <ol>
+           <li>Avoid using the term "Returning customer" or "New customer" for guest and sign-in options as being a customer doesnt necessarily relate to having an account or not. Headers "Registered customers" and "Guest checkout" are better</li>
+           <li>Guest checkout should have the word "Guest" in it, as users scan for this keyword. The header should include the guest keyword (ie. "Guest checkout")</li>
+           <li>When providing delayed account creation in the checkout confirmation step, for the guest checkout option provide explanatory text - let users know they can create an account at the end of the checkout process</li>
+          </ol>
+        </p>
+      <img src="img/653.jpg">
+        </div>
+
+        <button class="accordion">#676: Display all password-creation requirements upfront<span class="priority">Essential</span></button>
+        <div class="panel">
+        <p>ISSUE: If unaware of password requirements, users are likely to choose an invalid password, since there are no web conventions for password requirements.
+
+        </p>
+        <p>Not explaining the password requirements and restrictions can lead to invalidations and friction.
+        </p>
+        <p>
+          RECOMMENDATION:
+         <ol>
+           <li>Display password requirements upfront (ie. At least 6 characters, At least 1 number)</li>
+           <li>Use live inline validation - Indicate when typed, when each password requirement is met (ie. with a success tick) </li>
+           <li>Allow users to 'unmask' their password to show what they've typed</li>
+           <li>Use specific error messages if their password fails to met requirements</li>
+          </ol>
+        </p>
+      <img src="img/676.jpg">
+        </div>
+
+        <button class="accordion">#665: Allow users to 'show' password<span class="priority">Essential</span></button>
+        <div class="panel">
+        <p>ISSUE: When the password input is masked, it’s more difficult to type correctly, and it’s impossible to spot typos and preempt validation errors.
+
+        </p>
+        <p>With input masking, it is often hard for users to recall from their memory what they have just typed, and verify they have typed it in correctly without error. Users commonly want to double-check fields are typed in correctly. It is good to preempt validation errors for password fields.
+        </p>
+        <p>
+          RECOMMENDATION:
+         <ol>
+           <li>Have a 'Show/hide' inline link in the password field, so users can unmask/mask their password. Alternatively, have a select checkbox "Show password" under the password field.</li>
+          </ol>
+        </p>
+      <img src="img/676.jpg">
+        </div>
+
+        <button class="accordion">#640: Communicate benefits of creating an account<span class="priority impactful">Impactful</span></button>
+        <div class="panel">
+        <p>ISSUE: Users are predisposed to not want to create an optional account on their first purchase.
+        </p>
+        <p>When providing a guest checkout option, it is important to give upfront explantation users can create an account later. To ensure the most amount of users register after guest checkout, benefits of creating an account should be commmunicated. 
+        </p>
+        <p>
+          RECOMMENDATION:
+         <ol>
+           <li>Explain the benefits of creating an account. Bullet list of benefits (ie. Faster checkout, saved addresses, order tracking, more personalised, save multiple delivery addresses, earn loyalty points and recieve offers</li>
+          </ol>
+        </p>
+      <img src="img/640.jpg">
+        </div>
+
+        </div>
+
+  
+        <button class="accordion">Customer & address information (11)</button>
+       <div class="panel">
+
+        <button class="accordion">#731: Explain why personal information is needed<span class="priority">Essential</span></button>
+        <div class="panel">
+          <p>ISSUE: Some users are reluctant to provide seemingly unnecessary personal information, while others will abandon rather than provide the information.
+          </p>
+          <p>Users are concerned about privacy and security of their data. Users are reluctant to give out date of birth, phone number or gender. Users can feel tricked or forced into giving personal information. Some users may even enter false information to bypass strict requirements. 34% of users consider buying elsewhere if they are asked to provide their birthday or gender.
+          </p>
+          <p>
+            RECOMMENDATION:
+           <ol>
+             <li>If you need sensitive or personal data, explain clearly with microcopy why its needed. (ie. phone number: for delivery related questions</li>
+             <li>Consider making field(s) optional where the data is not absolutely needed</li>
+             <li>If asking for gender, which is highly personal, have "Rather not say" option if this is required</li>
+             <li>If there is a social sign in option, be transparent on the level of data access is given</li>
+            </ol>
+          </p>
+        <img src="img/731.jpg">
+          </div>
+          
+
+          <button class="accordion">#566: Use 'billing address' same as 'delivery address' by default<span class="priority">Essential</span></button>
+        <div class="panel">
+          <p>ISSUE: Showing users both a billing and a delivery address form by default — when most users order products to be delivered to their own address — results in unnecessary typing and can introduce errors, both of which can lead to abandonments.
+          </p>
+          <p>Most users order products to be delivered to their own address. 13% of sites dont have billing address = delivery address. Having duplicate form fields for billing address is a waste of time for the user. Checkout form fields should be minimised. Dont force users to type the billing address out.
+          </p>
+          <p>
+            RECOMMENDATION:
+           <ol>
+            <li>Hide all billing address forms entirely by default (not disabled but hidden)</li>
+             <li>For 'Billing address' have a checkbox "Same as delivery address" pre-checked by default</li>
+             <li>Always ask for delivery address first. Billing address is secondary (same as delivery address)</li>
+             <li>Consider showing textual summary of billing address</li>
+             <li>Gifting - if a product is marked as a gift, 'billing=delivery address' should not be applied by default</li>
+             <li>Store collection - only billing address is needed, given the location is the store collection</li>
+             <li>Context - if the site specifically about gifting, it is best not to default to 'billing=delivery address'</li>
+            </ol>
+          </p>
+        <img src="img/566.jpg">
+          </div>
+
+
+          <button class="accordion">#567: Explain the purpose of the Billing Address<span class="priority">Essential</span></button>
+          <div class="panel">
+            <p>ISSUE: Some users don’t fully understand the concept and purpose of a billing address, which can lead to unresolvable credit card validation errors.
+            </p>
+            <p>It can seem odd to users what 'billing address' is. The main purpose of billing address is for reciepts, payment card validation and tax.
+            </p>
+            <p>
+              RECOMMENDATION:
+             <ol>
+              <li>If billing address is used to verify payment card: explictity state "The billing address must match the address on the credit card or bank statement" or "Your billing address must match the address to which your card is registered" </li>
+            
+              </ol>
+            </p>
+          <img src="img/567.jpg">
+            </div>
+
+            <button class="accordion">#565: For international orders, localise the address fields to match country-specific conditions<span class="priority">Essential</span></button>
+            <div class="panel">
+              <p>ISSUE: International users will not recognize the site’s own local, or any non-matching, address structure.
+              </p>
+              <p>A common observed example is UK based site where users shipping is outside of the UK are shown a field for "County". Also for US sites, for shipping outside the US it still requires users to select "State" and "Zip code".
+              </p>
+              <p>
+                RECOMMENDATION:
+               <ol>
+                <li>Localise address form fields. Dont use 'State' or 'Zip code' for UK sites. Dont use 'County' for US sites</li>
+                <li>The majority of international users can be shown localised form fields by default by using IP geo-targeting</li>
+                </ol>
+              </p>
+              </div>
+
+              <button class="accordion">#736: Be cautious of semi-automatic address lookup features<span class="priority">Essential</span></button>
+          <div class="panel">
+            <p>ISSUE: Semi-automatic address lookup features add significant friction for a subset of users, and may even cause abandonments.
+            </p>
+            <p>Traditionally users have entered their address manually. A newer simplification pattern that performs well is a postcode lookup. Two main implementations are: 1 - full-automatic live autosuggested addresses as the user types, or 2 - semi-automatic lookup where users must submit "Find address" after typing in postcode.
+            </p>
+            <p>
+              RECOMMENDATION:
+             <ol>
+              <li>Street address lookups tend to cause issues with usabiltiy and browsers auto-filling address information. It is still good practice to display all address fields</li>
+              </ol>
+            </p>
+            </div>
+
+
+            <button class="accordion">#558: Have a single phone field and avoid asking for phone type<span class="priority">Essential</span></button>
+            <div class="panel">
+              <p>ISSUE: Users have a difficult time understanding the need for multiple phone number form fields and phone type selectors, which can lead to validation errors.
+              </p>
+        
+              <p>
+                RECOMMENDATION:
+               <ol>
+                <li>If asking for phone number, do not specify different types (ie. "Daytime" "Work" "Mobile"). Multiple mobile fields causes unnecessary friction. Limit to 1 phone number form field if needed</li>
+                <li>Do not split a phone number field into multiple fields. Just 1 field.</li>
+                </ol>
+              </p>
+              <img src="img/731.jpg">
+              </div>
+
+              <button class="accordion">#557: Use a single 'Full name' field instead of separate<span class="priority">Essential</span></button>
+              <div class="panel">
+                <p>ISSUE: Users think of their name as a single entity, and therefore often write their full name in the ‘First Name’ field instead of separate.
+                </p>
+                <p>Users generally think of their name as a single entity. A large proportion of users type their full name in the 'First name' field. 42% users type their full name in the 'First name' field.
+                </p>
+          
+                <p>
+                  RECOMMENDATION:
+                 <ol>
+                  <li>Instead of having 3 separate form fields for 'First name', 'middle name' 'last name', have 1 field 'Full name'</li>
+                  <li>Titles and suffixes add to overall complexity and should be avoided, or made optional</li>
+            
+                  </ol>
+                </p>
+                <img src="img/557.jpg">
+                </div>
+
+
+                <button class="accordion">#560: Use an auto-complete country selector instead of a dropdown<span class="priority detail">Detail</span></button>
+                <div class="panel">
+                  <p>ISSUE: Conventional country drop-downs can be overwhelming, and are difficult to scan and maneuver, as they present a list of hundreds of values in a small scrollable element, with inconsistent UI behavior.
+                  </p>
+                  <p>A user's delivery country can usually be geotargeted based on a user's IP address with great precision, so the Country input can often have a default selection.
+                  </p>
+            
+                  <p>
+                    RECOMMENDATION:
+                   <ol>
+                    <li>Avoid using a dropdown for a Country input. The dropdown list is too long, requires scrolling and can be intimidating. There is a lack of overview, unclear sorting, scrolling issues, breaks the tabbing flow and more.</li>
+                    <li>Use an autocomplete Country selector. As the user begins typing, possible matches are suggested.</li>
+                    <li>If using an autocomplete Country selector, account for spelling typos and shorthand.</li>
+                    <li>If using an autocomplete Country selector, support variations (ie. UK, US, different spellings)</li>
+                    <li>If using an autocomplete Country selector, use custom sorting logic based on the relative popularity. (ie. A UK site may want to order United Kingdom before United States)</li>
+                    </ol>
+                  </p>
+                  <img src="img/560.jpg">
+                  </div>
+
+
+                  <button class="accordion">#573: Use IP geo-targeting to pre-select Country form field<span class="priority impactful">Impactful</span></button>
+                  <div class="panel">
+                    <p>ISSUE: Users have been spoiled by big companies like Google and Facebook, and have now come to expect geo-targeting of their country.
+                    </p>
+                    <p>Users generally want to type as little as possible. Geo-targeting to infer Country location reduces the amount of fields. Users have expectations of their Country being detected and pre-selected. Depending on user location, the address fields can adapt to that Country.
+                    </p>
+              
+                    <p>
+                      RECOMMENDATION:
+                     <ol>
+                      <li>Use geo-targeting to determine a user's Country location. Pre-select this Country for the address field</li>
+                      <li>Allow users to override the pre-selected address, if the location is incorrect. Present auto-selected and pre-filled values in open input fields and not as plain-text</li>
+                      <li>Use an auto-complete open text selector for the Country input field</li>
+                      </ol>
+                    </p>
+                    <img src="img/573.jpg">
+                    </div>
+
+
+                    <button class="accordion">#562: Consider hiding 'Address line 2' behind a link<span class="priority impactful">Impactful</span></button>
+                  <div class="panel">
+                    <p>ISSUE: The presence of ‘Address Line 2’ breaks some users’ typing flow and makes them question if their initial ‘Address Line 1’ input is correct.
+                    </p>
+                    <p>An "Address Line 2" field makes 30% of users come to a stop, and question if their initial "Address Line 1" input was correct. Whilst inputs "Address Line 2" and "Address Line 3" tend to be optional, open text fields demand a disproportionate amount of attention as users have to work if its relevant to them. The labels "1 and 2" are ambigous, with users wondering if they should type all information in Address Line 1. 
+                    </p>
+              
+                    <p>
+                      RECOMMENDATION:
+                     <ol>
+                      <li>Hide "Address Line 2" behind a link, to reduce ambiguity. Only permanently display "Address Line 1". On the expand link, have an indication such as a "+" icon, and using "add" terminology</li>
+                      <li>If a significant amount of customers need "Address Line 2, then permanently display it.</li>
+                      </ol>
+                    </p>
+                    <img src="img/562.jpg">
+                    </div>
+
+
+                    <button class="accordion">#564: Avoid or clarify 'Business Address' selections<span class="priority impactful">Impactful</span></button>
+                  <div class="panel">
+                    <p>ISSUE: The concept of address selection confuses some users and, for most, adds unnecessary friction to the typing flow.
+                    </p>
+                    <p>The majority of users will only purchase products as a private person - not as a business. The majority of users are not used to understanding 'address types' (ie. Residential or commercial). Needless attention, confusion and errors are observed with an 'address type' selector.
+                    </p>
+              
+                    <p>
+                      RECOMMENDATION:
+                     <ol>
+                      <li>Do not use an "Address type: residential/commercial" selector</li>
+                      <li>If you need to support B2B, have an "+ Add Company name" hidden behind a link along with the Address line 2 link</li>
+                      </ol>
+                    </p>
+                    <img src="img/564.jpg">
+                    </div>
+        
+        </div>
+
+
+          <button class="accordion">Gifting flow and features (5)</button>
+          <div class="panel">
+           <button class="accordion">#637: Provide a 'guest checkout' option<span class="priority">Essential</span></button>
+           <div class="panel">
+             </div></div>
+
+
+             <button class="accordion">Delivery and collection (11)</button>
+             <div class="panel">
+              <button class="accordion">#544: Provide costs upfront for all delivery options<span class="priority">Essential</span></button>
+              <div class="panel">
+                <p>ISSUE: Users need to be able to see all delivery costs at once to make an informed delivery comparison and selection decision. Hiding this information makes for a clunky, deceptive and frustrating delivery-selection process.
+                </p>
+                <p>There is a direct correlation between delivery cost and delivery speed. Speedier delivery = expectation of more expensive than slower options. Users can abandon if costs are not communicated upfront.
+                </p>
+          
+                <p>
+                  RECOMMENDATION:
+                 <ol>
+                  <li>Always display delivery costs at the checkout step, for every delivery option, so users can compare their options</li>
+                  <li>Always display the delivery cost in the checkout order summary. Never only display delivery cost at the end of the checkout.</li>
+                  </ol>
+                </p>
+                <img src="img/547.jpg">
+                </div>
+
+
+                <button class="accordion">#547: How to design the delivery selector interface<span class="priority">Essential</span></button>
+                <div class="panel">
+                  <p>ISSUE: Some interface designs make it needlessly difficult for users to notice, understand, and compare their delivery options.
+                  </p>
+                  <p>There is a direct correlation between delivery cost and delivery speed. Speedier delivery = expectation of more expensive than slower options. Users can abandon if costs are not communicated upfront.
+                  </p>
+            
+                  <p>
+                    RECOMMENDATION:
+                   <ol>
+                    <li>Never use a drop-down interface for delivery options. This causes severe usability issues and options are hidden. 36% of users do not interact with a dropdown for delivery options</li>
+                    <li>Use radio buttons for present all the delivery options with clear cost indication for each.</li>
+                    <li>Have clear information affiliation (close together, not big spaces between). Use dividers, borders or subtle alternating background colour for easier interpretation. Make the information as easy as possible to relate</li>
+                    <li>Have clear information hierachy. Delivery cost, delivery date (expected arrival time), delivery name, cut-off time (ie. if you order within X minutes), descriptions</li>
+                    <li>Use "Delivery date" (ie. Arrives on Tuesday 28th April) instead of "Delivery speed"</li>
+                    <li>If a delivery option is free, indicate with "Free"</li>
+                    </ol>
+                  </p>
+                  <img src="img/547.jpg">
+                  </div>
+
+
+                  <button class="accordion">#550: Have the cheapest delivery option selected by default<span class="priority">Essential</span></button>
+                <div class="panel">
+                  <p>ISSUE: Without a default delivery selection, users will have to read and understand all the alternatives before making a choice.
+                  </p>
+                  <p>Not having a default selected delivery option causes friction, and needless validation errors. The vast majority of users will want whatever delivery option is the cheapest. 50% of users abandon if the "extra costs are too high".
+                  </p>
+            
+                  <p>
+                    RECOMMENDATION:
+                   <ol>
+                    <li>Select by default the cheapest delivery option</li>
+                    <li>Never select by default more expensive options or subscriptions. This is interpreted as the site trying to 'trick' the user</li>
+                    <li>Order delivery options from cheapest to most expensive. First delivery options are interpreted as cheapest</li>
+                    <li>Present the cheapest home delivery options first. The the free store collection option. Given most users will prefer a home delivery</li>
+                    <li>Avoid having an invalid option to be selected by default (ie. if minimum spend has not been reached)</li>
+                    </ol>
+                  </p>
+                  <img src="img/547.jpg">
+                  </div>
+
+                  
+                  <button class="accordion">#543: Use "Delivery date" instead of "Delivery speed"<span class="priority impactful">Impactful</span></button>
+                  <div class="panel">
+                    <p>ISSUE: “Delivery Speed” requires users to investigate and estimate themselves when they can expect to receive their order.
+                    </p>
+                    <p>"2 business days" forces the user to calculate and guess when they actually receive their order. It adds choice complexity into the checkout. Users primarily want to know "when can I expect to receive my order?". 
+                    </p>
+              
+                    <p>
+                      RECOMMENDATION:
+                     <ol>
+                      <li>Display the delivery date (ie. Arrives by 28th April)instead of 'speed'</li>
+                      <li>If an exact delivery date is not possible, show a range (ie. "Arrives 3rd April - 9th April")</li>
+                      <li>For the delivery date, present it as either "Get it by {deliveryDate}", "Delivered on or before {deliveryDate}", or "Arrives {deliveryDate}</li>
+                     
+                      </ol>
+                    </p>
+                    <img src="img/547.jpg">
+                    </div>
+
+
+                    <button class="accordion">#548: Show cutoff time as a countdown<span class="priority">Essential</span></button>
+                  <div class="panel">
+                    <p>ISSUE: Order cutoff time is irrelevant for the majority of users, and is difficult to interpret for those for whom it is relevant.
+                    </p>
+                    <p>It is important to communicate when during 'today' the order must be placed in order to honour the displayed 'Delivery date'. A customer missing the order cutoff time is a severe pain.
+                    </p>
+              
+                    <p>
+                      RECOMMENDATION:
+                     <ol>
+                      <li>For the delivery option, display the cutoff time as a countdown like "if ordered within 50 minutes". Do not display as a date to prevent it getting confused with delivery date.</li>
+                      <li>Style the cutoff time in green for better interpretation</li>
+                      <li>Do not style the delivery order cutoff time as primary content (ie. bold).</li>
+                      <li>To address the issue of distraction caused by displaying the cutoff countdown when not needed, only display the cutoff time when the option is selected.</li>
+                      <li>Cutoff times can also be displayed on promotional limited-time sale (ie. "Ends in 17:38:23" countdown timer)</li>
+                      </ol>
+                    </p>
+                    <img src="img/548.jpg">
+                    </div>
+
+
+                    <button class="accordion">#549: How to display "Free delivery"<span class="priority detail">Detail</span></button>
+                  <div class="panel">
+                    <p>ISSUE: Some users have a hard time understanding what the spending requirements are to receive free delivery.
+                    </p>
+                    <p>Many websites have a minimum spend for free delivery. Generally websites present this as either static (ie. "Spend £50 for free delivery") or dynamic (ie. "Spend £21.42 more for free delivery"). 61% of users shown a free-delivery threshold would consider adding more items.
+                    </p>
+                    <p>
+                      RECOMMENDATION:
+                     <ol>
+                      <li>Display in the basket order summary the free delivery threshold (ie. "Orders on £40+ get FREE delivery" or dynamic "Spend £20.87 more for FREE delivery") to nudge users to qualify for free delivery</li>
+                      <li>Consider showing how much money they have saved by qualifying for free delivery. This reassures users.</li>
+                      </ol>
+                    </p>
+                    <img src="img/549.jpg">
+                    <img src="img/549a.jpg">
+                    </div>
+
+
+                    <button class="accordion">#632: Present "Store collection" within the delivery interface itself<span class="priority impactful">Impactful</span></button>
+                    <div class="panel">
+                      <p>ISSUE: Store collection features are rarely placed in the areas where users expect to find them.
+                      </p>
+                      <p>For users who want to save money on delivery, a store collection my be more appealing. 50% of online shoppers abandon orders due to "too high extra costs added". A common implementation is to have the Collection option before the checkout, or the very first option in checkout. Many users look for store collection as a shipping method. 39% of sites dont display Collection as an option during the delivery step. 54% of sites make it difficult for users to discover there's a collection option available.
+                      </p>
+                      <p>
+                        RECOMMENDATION:
+                       <ol>
+                        <li>Display the store collection option in the shipping options. Always pre-select the cheapest delivery option by default. Home deliveries should come first in hierachy, before collections</li>
+                        <li>Display the available store collection time. Many users assume store collection would always be available on the same day</li>
+                        <li>Allow users to change their store collection location easily. The store collection option should include distance, stock availability and store info.</li>
+                        <li>If store collection is selected before the checkout, consider customising the entire checkout flow to simplify for collection.</li>
+                      
+                        </ol>
+                      </p>
+                      <img src="img/632.jpg">
+                      <img src="img/632a.jpg">
+                      </div>
+
+
+                      <button class="accordion">#633: Store collection needs to be comparable against the time and cost for delivery<span class="priority impactful">Impactful</span></button>
+                      <div class="panel">
+                        <p>ISSUE: Users have a hard time deciding between in-store collection or delivery without a full presentation of the costs and delivery speed details.
+                        </p>
+                        <p>In-store collection should be offered alongside other delivery options when it is available. When introduced earlier (on the basket page or product page) it can allow a site to customise and simplify the checkout flow.
+                        </p>
+                        <p>
+                          RECOMMENDATION:
+                         <ol>
+                          <li>If presenting shipping options outside the checkout area, present the full details (cost, delivery date) of all the options.</li>
+                          <li>For in-store collection, display the cost, how far they will have to drive, and availability</li>
+                        
+                          </ol>
+                        </p>
+                        <img src="img/632.jpg">
+                        <img src="img/632a.jpg">
+                        </div>
+
+
+                        <button class="accordion">#631: Store collection, store availability may be unfamiliar concepts<span class="priority impactful">Impactful</span></button>
+                        <div class="panel">
+                          <p>ISSUE: Users may confuse ‘Store collection' or may not fully understand the subtle nuances of the alternative omni-channel delivery options.
+                          </p>
+                          <p>Users are still unfamiliar with concepts of 'Store collection'.
+                          </p>
+                          <p>
+                            RECOMMENDATION:
+                           <ol>
+                            <li>Explicity include the word 'Collection' as a label.</li>
+                            <li>For an in-store collection option, state the date it is available to collect, how long they are held in-store for</li>
+                            </ol>
+                          </p>
+                          <img src="img/632.jpg">
+                          <img src="img/632a.jpg">
+                          </div>
+
+
+                          <button class="accordion">#634: The collection 'store selector' should include Distance, Item-availability and Store info<span class="priority impactful">Impactful</span></button>
+                          <div class="panel">
+                            <p>ISSUE: Selecting the closest store can be difficult without local knowledge, and the choice is often based on a mix of distance, item availability and opening hours.
+                            </p>
+                            <p>IP geo-targeting and account data can be used to set a smart default store selection, closest in distance to the user. A large proportion of users will still need the ability to change the collection store. 
+                            </p>
+                            <p>
+                              RECOMMENDATION:
+                             <ol>
+                              <li>Avoid using a drop-down for selecting a store</li>
+                              <li>Use a default collection store based on IP geolocation, account data and previous typed location</li>
+                              <li>On a store selection list, for each store location, display the distance from the user and item availability. Also list the store hours and address</li>
+                              <li>Have an ability to find the nearest stores either by typing a postcode. List the stores in order of distance.</li>
+                              </ol>
+                            </p>
+                            <img src="img/634.jpg">
+                            </div>
+
+
+                            <button class="accordion">#635: Customise the Checkout flow for "In-store collection"<span class="priority detail">Detail</span></button>
+                            <div class="panel">
+                              <p>ISSUE: The traditional checkout flow may not apply to users who’ve selected store collection.
+                              </p>
+                              <p>If a user opts for store collection before entering the checkout flow, there are several ways the checkout can be customised for simplying.
+                              </p>
+                              <p>
+                                RECOMMENDATION:
+                               <ol>
+                                <li>If the order can be reserved and paid in store when collected, the payment details, billing address and home address is not needed</li>
+                                <li>Eliminate redundant fields in the in-store collection flow</li>
+                                <li>Consider an option specifically for collection to "Text me once my order is ready to collect"</li>
+                                <li>For in-store collection order confirmation page, include: when the order can be collected, a map or directions to the store, opening and closing hours of the store, clearly state if the confirmation needs to be printed or reference they need to bring, the last date the order can be picked up</li>
+                                </ol>
+                              </p>
+                              </div>
+
+
+            
+
+              </div>
+
+              
+
+
+                <button class="accordion">Payment flow (8)</button>
+                <div class="panel">
+                 <button class="accordion">#590: Use a Tabbed payment method interface with a default selection<span class="priority impactful">Impactful</span></button>
+                 <div class="panel">
+                  <p>ISSUE: A minority of users want alternative payment methods, however, that greatly increases selection complexity for the majority users who don’t care or understand the alternatives.
+                  </p>
+                  <p>As new payment methods are introduced to users, their expectations about what they can use during checkout will evolve - along with tradtional payment methods like credit cards, coupon codes, loyalty points. Users face choice paralysis or are slowed down considerably when showed too many payment method options.
+                  </p>
+                  <p>
+                    RECOMMENDATION:
+                   <ol>
+                    <li>Offer more than just credit card payment method during checkout. Offer 3rd party payment methods too.</li>
+                    <li>"Credit card" should be considered a single payment method that has all debit/credit card types in. Auto detect the credit card type based on the card number</li>
+                    <li>Have "credit card" as the default selected payment method. This is the most common payment method over third-party methods.</li>
+                    <li>Where local payments are more popular than credit cards, have this as the default selection for users. Use IP Geo-targeting to pre-select the user's Country</li>
+                    <li>Use a 'tabbed' design for the payment method section.</li>
+                    </ol>
+                  </p>
+                  <img src="img/590.jpg">
+                  </div>
+
+                  <button class="accordion">#671: Have one or more third-party payment options as a secondary choice<span class="priority impactful">Impactful</span></button>
+                  <div class="panel">
+                   <p>ISSUE: A subset of users rely on third-party payment options to complete their order, and some will abandon if their preferred payment option isn’t available.
+                   </p>
+                   <p>85% of top e-commerce sites currently offer one or more third-party payment options. Users expectations are increasing for using more third-party payment options. The majority of users will use a credit card type of payment. 6% of users may abandon checkout if their desired third-party payment option isnt supported. Alternative payment methods are also helpful if their credit card was rejected.
+                   </p>
+                   <p>
+                     RECOMMENDATION:
+                    <ol>
+                     <li>Offer more than just credit card payment method during checkout. Offer at least one third-party payment method too as a secondary choice</li>
+                     <li>Always pre-select the most popular payment option (ie. Credit card) as default. Have third-party payment options as a secondary choice</li>
+                    
+                     </ol>
+                   </p>
+                   <img src="img/671.jpg">
+                   </div>
+
+
+                   <button class="accordion">#617: Avoid multi-step gift-card redeption flows<span class="priority impactful">Impactful</span></button>
+                   <div class="panel">
+                    <p>ISSUE: Requiring multiple steps to validate and redeem a gift card results in user frustration.
+                    </p>
+                    <p>It is important gift cards are easy to redeem and use on their current order. Users find it frustrating if the gift card they have applied is not applied to their order.
+                    </p>
+                    <p>
+                      RECOMMENDATION:
+                     <ol>
+                      <li>If a gift card has been redeemed, show it applied to the account balance and automatically applied to be spent on their current order with a checkbox</li>
+                      <li>In the checkout, have a redeem gift card ability. If users redeem during the checkout flower, we can safely assume its because the user wants to use on their current order.</li>
+                      </ol>
+                    </p>
+                    <img src="img/617.jpg">
+                    </div>
+
+
+                    <button class="accordion">#615: Hide coupon and promotional fields behind a link<span class="priority">Essential</span></button>
+                    <div class="panel">
+                     <p>ISSUE: Promotional fields are distracting and encourage users to leave the checkout to go hunt for coupons off-site.
+                     </p>
+                     <p>Coupon and promotion fields draw a disproportionate amount of user attention, and can cause users to abandon checkout to code-hunt. Also, users can feel 'buyers remorse' if they checkout without any coupons - feeling regret they paid full price (feeling of overpaying).
+                     </p>
+                     <p>
+                       RECOMMENDATION:
+                      <ol>
+                       <li>Hide coupon fields (and Apply button) behind a link. To remove the needless attention. Display the fields when this is clicked</li>
+                       <li>Give the coupon link a secondary position on the page, for example below the Order Summary</li>
+                       </ol>
+                     </p>
+                     <img src="img/615.jpg">
+                     </div>
+
+                     <button class="accordion">#616: Accept all input formatting when redeeming gift cards<span class="priority impactful">Impactful</span></button>
+                    <div class="panel">
+                     <p>ISSUE: Users interpret special formatting like dashes or capitalization on gift cards differently, some type them, others don’t.
+                     </p>
+                     <p>When users type in long code numbers, users verify the correctness of that characters they've entered. Users sometimes type in the hypens.
+                     </p>
+                     <p>
+                       RECOMMENDATION:
+                      <ol>
+                       <li>Chunk the long code number into 4-6 character groups. Its easier to type and check afterwards</li>
+                       <li>The code accepting logic should accept all interpretations of the printed gift code (ie. spaces, hypens, uppercase, lowercase)</li>
+                       <li>Use input masking (automatic spacing) between chunked characters</li>
+                       </ol>
+                     </p>
+                     <img src="img/616.jpg">
+                     </div>
+
+                     <button class="accordion">#672: Explain the third-party payment flow and customise button copy<span class="priority impactful">Impactful</span></button>
+                    <div class="panel">
+                     <p>ISSUE: The flows for beginning and completing third-party checkouts often differ and aren’t sufficiently clear to users prior to initiating the process.
+                     </p>
+                     <p>Third-party payment provider payment flows may be different depending on supplier and implementation. To alleviate this issues, sites should explain how the third-party payment flow works within the checkout.
+                     </p>
+                     <p>
+                       RECOMMENDATION:
+                      <ol>
+                       <li>Have dyanmic payment button label to make it clear what action will be initiated when clicked.</li>
+                       <li>If users are taken to a third-party website, have microcopy to explain this</li>
+                       </ol>
+                     </p>
+                     <img src="img/672.jpg">
+                     </div>
+
+                     <button class="accordion">#586: Clarify if primary buttons finalise the order<span class="priority impactful">Impactful</span></button>
+                    <div class="panel">
+                     <p>ISSUE: Users worry that, after having typed their payment information, once they click the primary button their card will be charged.
+                     </p>
+                     <p>It is important to allow users to remain in control throughout the checkout process and especially the payment step. After users enter their payment details, they become much more careful of clicking primary buttons. If reassuring text is not provided next to primary buttons, users are hesitant - not knowing when they click a button if they will be charged.
+                     </p>
+                     <p>
+                       RECOMMENDATION:
+                      <ol>
+                       <li>Have some microcopy next to the primary button in the payment interface (after payment details) that clarifies if the order will or won't be finalised. (ie. "Don't worry, your card won't be charged yet")</li>
+                       <li>Consider using a button label that explicitly clarifies the button's function (ie. "Continue to Review", or "Place order")</li>
+                       <li>Do not use vague button labels like "Continue"</li>
+                       <li>Use visible process steps to reassure the user that clicking the primary button won't finalise their order.</li>
+                       </ol>
+                     </p>
+                     <img src="img/586.jpg">
+                     </div>
+
+
+
+                     <button class="accordion">#589: Make international user's local currency the default selection<span class="priority detail">Detail</span></button>
+                    <div class="panel">
+                     <p>ISSUE: Currency selection is a complex decision to make and difficult one to understand, with individual users often having different preferences.
+                     </p>
+                     <p>For international sites, if they support the option to pay in their local currency, there must be a high level of transparency. Not all users are familiar with selecting order currency. Some users assumed the site was trying to make additional money from them by providing a poor currency exchange rate.
+                     </p>
+                     <p>
+                       RECOMMENDATION:
+                      <ol>
+                        <li>UK users purchasing from a UK based company dont expect currency selectors. Only support alternative currencies if the sites currency differs from the user's location</li>
+                       <li>If alternative currencies are offered, there should be a smart default. Local currency detection can be based on user's shipping address, by IP geo-targeting, or even better the credit card issuer's bank location inferred from the card's IIN/BIN range.</li>
+                       <li>Always give order totals in their native currency</li>
+                       <li>Consider having a tooltip with further clarification of the currency-selection consequences.</li>
+                       </ol>
+                     </p>
+                     <img src="img/589.jpg">
+                     </div>
+                  
+
+                  </div>
+
+
+
+
+
+                   <button class="accordion">Credit card form (10)</button>
+                   <div class="panel">
+                    <button class="accordion">#582: Luhn validate the credit card number field<span class="priority">Essential</span></button>
+                    <div class="panel">
+                     <p>ISSUE: When a user’s card number input isn’t checked for typos before it’s submitted to the payment processor needless data-loss validation errors are likely.
+                     </p>
+                     <p>Typing a 15 digit card number string without errors can be difficult for users. It is good practice to support spaces typed and/or using input masking (automatic spaces) to break the number into smaller chunks. 53% of sites don't Luhn validate the credit card number. The Luhn validation can't say if the typed card is valid/has funds, but can tell if the typed card number sequence has been correctly typed. The typed card can still fail later on.
+                     </p>
+                     <p>
+                       RECOMMENDATION:
+                      <ol>
+                        <li>Use inline-validation (Luhn check) to check if the credit card number has been typed correctly. This helps users correct it before the entire payment form is submitted (error prevention)</li>
+                        <li>For the Luhn check error message, make it more obvious its a 'check' that is contextual. (ie. "The card number looks like it's mistyped")</li>
+                        <li>There are front-end Luhn validation scripts along with Modulus 10 checksum to make the implementation easier</li>
+                       </ol>
+                     </p>
+                     <img src="img/582.jpg">
+                     </div>
+
+
+                     <button class="accordion">#594: Autoformat spaces in the credit card number field<span class="priority">Essential</span></button>
+                    <div class="panel">
+                     <p>ISSUE: Users have difficulty typing and verifying the 15–16 digit long credit card number.
+                     </p>
+                     <p>Typing a 16 digit card number string without errors can be difficult for users. Users often type then look-over what they've entered, to make sure its correct. It is hard to check a long number accurately. A single digit entered incorrectly will result in payment validation errors.
+                     </p>
+                     <p>
+                       RECOMMENDATION:
+                      <ol>
+                        <li>Autoformat (input mask) the card number with spaces WHEN the user is typing. This will result in fewer payment validation errors. If the user is typing a VISA or MasterCard number, the input should be autoformatted to include a space for every 4-digit sequence. Use an input mask for the appropriate card type after its been autodetected.</li>
+                        <li>If not providing an input mask for the "Card number" field, allow users to type spaces. Do not count spaces in the character limit.</li>
+                        <li>Avoid character limits on the "Card number" field</li>
+                        <li>For guidance of spaces for each card, view <a href="https://baymard.com/checkout-usability/credit-card-patterns">Credit card patterns</a></li>
+                       </ol>
+                     </p>
+                     <img src="img/594.jpg">
+                     </div>
+
+
+                     <button class="accordion">#587: Visually emphasise the secruity of the credit card fields<span class="priority">Essential</span></button>
+                    <div class="panel">
+                     <p>ISSUE: Users are concerned about the security of their payment information, yet have very little understanding of the technicalities of form security.
+                     </p>
+                     <p>17% of users abandon checkout flow because they didn't trust the site with their credit card details. Users may need reassurance their payment details are safe.
+                     </p>
+                     <p>
+                       RECOMMENDATION:
+                      <ol>
+                        <li>Ensure the page is HTTPS enabled</li>
+                        <li>Use visual cues such as microcopy and a padlock icon (ie. "This is a secure encrypted payment")</li>
+                        <li>Consider using a seal (ie. SSL certificate, Norton secured)</li>
+                       </ol>
+                     </p>
+                     <img src="img/587.jpg">
+                     </div>
+
+
+                     <button class="accordion">#583: Save Guest users' credit card information for entire checkout session<span class="priority impactful">Impactful</span></button>
+                     <div class="panel">
+                      <p>ISSUE: Being forced to re-enter credit card details is time-consuming and can lead to validation errors if details are entered incorrectly — which can cause users to abandon the checkout.
+                      </p>
+                      <p>Once entered, payment details should be retained for the length of the checkout session, even if the user goes back in the process (ie. to edit an address).
+                      </p>
+                      <p>
+                        RECOMMENDATION:
+                       <ol>
+                         <li>Guest users should not be forced to re-enter payment information if they go back in the checkout process.</li>
+                         <li>For registered users, only ask users to re-enter payment details if they edit or change their delivery address. This is for greater security (to prevent any hacker's ability to send items to a new address. Inform users why they need to re-enter this for security</li>
+                         <li>Re-iterate the "Retype for security" flow if a user changes their address</li>
+                        </ol>
+                      </p>
+                      <img src="img/583.jpg">
+                      </div>
+
+                      <button class="accordion">#588: Clarify that "Cardholder name" is to be typed exactly as it appears on the card <span class="priority">Essential</span></button>
+                     <div class="panel">
+                      <p>ISSUE: It’s often unclear what should be entered in the ‘Name on Card’ field and some users don’t understand the purpose of the field.
+                      </p>
+                      <p>Ensuring users type out the name on their credit card exactly how it is printed is critical to the checkout success.
+                      </p>
+                      <p>
+                        RECOMMENDATION:
+                       <ol>
+                         <li>Ideally, do not have the field "Name on card". This avoids any potential issues</li>
+                         <li>Label the "Name on card" field clearly for users (ie. "Cardholder name (as it appears on card)")</li>
+                        </ol>
+                      </p>
+                      <img src="img/588.jpg">
+                      </div>
+
+                      <button class="accordion">#577: Use a 2-digit month (MM) and year (YY) format for the expiration date fields <span class="priority">Essential</span></button>
+                     <div class="panel">
+                      <p>ISSUE: Many users will have needless validation errors or a disruption to their form-filling process if forced to translate what’s printed on their physical cards to what they see in the virtual expiration date fields.
+                      </p>
+                      <p>Ensure the expiration fields or dropdowns are formatted to resemble the same format on the card. Non-standard formatting causes issues as users need to think and interupts their flow.
+                      </p>
+                      <p>
+                        RECOMMENDATION:
+                       <ol>
+                         <li>Show the card expiration format as 2-digits. (ie. "MM/YY = 02/22). Do not use non-standard formatting</li>
+                         <li>Consider having a slash between fields to represent better the card</li>
+                         <li>Consider 2 separate fields for MM and YY, or having 1 field. If using 1 field</li>
+                      
+                        </ol>
+                      </p>
+                      <img src="img/577.jpg">
+                      </div>
+
+                      <button class="accordion">#584: Provide a dynamic thumbnail or a hint for the 'Security code' field<span class="priority impactful">Impactful</span></button>
+                     <div class="panel">
+                      <p>ISSUE: A significant portion of users hesitate or come to a stop when asked to input their credit card ‘Security Code’.
+                      </p>
+                      <p>Users slow down when presented a 'Security code' field, to stop and think what it is. Many users do not understand what 'CVV' or 'CVC' means. Their checkout flow is interupted. 
+                      </p>
+                      <p>
+                        RECOMMENDATION:
+                       <ol>
+                         <li>Next to the 'Security code' field, have an inline image to communicate where the security code is located on their card. This outperforms a tooltip</li>
+                         <li>Consider having a dynamic label next to the inline thumbnail "3 digits on back of card". If the card is American Express, the label would be "4 digits on front of card"</li>
+                         <li>Shorten the width of the input field to signal to the user that a short number sequence is to be entered.</li>
+                         <li>If the payment method is a third-party like PayPal, hide the "Security code" field</li>
+                        </ol>
+                      </p>
+                      <img src="img/584.jpg">
+                      </div>
+
+
+                      <button class="accordion">#591: Auto-detect the credit card type based on the card number<span class="priority detail">Detail</span></button>
+                     <div class="panel">
+                      <p>ISSUE: It adds unnecessary friction to the checkout process when users are required to manually select their credit card type.
+                      </p>
+                      <p>Forcing users to select their card type before typing in the credit card number adds unnecessary friction to the checkout. Auto-detect the card type so users do not need to manually choose card type - so users fill in fewer form fields. The credit card type can be detected by looking up the Issuer Identification Number (IIN).
+                      </p>
+                      <p>
+                        RECOMMENDATION:
+                       <ol>
+                         <li>When typing a card number, auto-detect the card type from the IIN (up to 6 digits). Do not auto-detect only after users leave the field (onblur)</li>
+                         <li>After the card type is autodetected, customise the: security code, input masking of card number, LUHN validation of card number, display of card icons, currency of the card, display or removal or card specific options</li>
+                        </ol>
+                      </p>
+                      <img src="img/591.jpg">
+                      </div>
+
+                      <button class="accordion">#585: Make credit card icons secondary in the payment interface<span class="priority impactful">Impactful</span></button>
+                     <div class="panel">
+                      <p>ISSUE: Users misinterpret the credit card icons as buttons they have to click rather than static images.
+                      </p>
+                      <p>Many users mis-interpet card icons as clickable. Icons can be distracting for users, as many think they need to click their card type.
+                      </p>
+                      <p>
+                        RECOMMENDATION:
+                       <ol>
+                         <li>Auto-detect the card type to avoid visual emphasis on card icons. Only show a card icon when a card number is being typed</li>
+                         <li>Do not show a row of card icons before the payment card field. Only show when the card type is auto-detected.</li>
+                        </ol>
+                      </p>
+                      <img src="img/591.jpg">
+                      </div>
+
+                      <button class="accordion">#664: Match the credit card field sequence to the physical card's information sequence<span class="priority detail">Detail</span></button>
+                      <div class="panel">
+                       <p>ISSUE: When typing info into credit card fields, users take their form-filling cues from the physical card, and if site’s field sequence is out of order with the physical card’s information they’re more likely to make mistakes.
+                       </p>
+                       <p>Credit card information is one of the most error-prone inputs during checkout flow. This is because users will need to manually transfer the long strings of numbers printed on their physical card to the website interface. When inputting information taken from a physical object, it is essential to match the digial inputs to the physical layout. 36 of sites don't match the credit card field sequence to the physical card's information layout.
+                       </p>
+                       <p>
+                         RECOMMENDATION:
+                        <ol>
+                          <li>The credit card field sequence should match the order of information on the physical card</li>
+                          <li>Have the security code last, to avoid the user having the physicaly flip their card multiple times</li>
+                        
+                         </ol>
+                       </p>
+                       <img src="img/644.jpg">
+                       </div>
+ 
+
+
+                    
+                      
+                    </div>
+
+
+
+                      <button class="accordion">Order review (5)</button>
+                      <div class="panel">
+                        <button class="accordion">#552: Allow users to edit data directly at the review step<span class="priority">Essential</span></button>
+                        <div class="panel">
+                         <p>ISSUE: Editing prior-typed information often leads to cumbersome navigation when users are sent backwards in the checkout flow.
+                         </p>
+                         <p>The order review step allows users to confirm that their selected products are correct. Users often find mistakes in their order which they wish to edit (ie. adding more products). Having a review step saves users from placing orders with errors.
+                         </p>
+                         <p>
+                           RECOMMENDATION:
+                          <ol>
+                            <li>Do not send users 'backwards' in the checkout flow when wanting to edit some information presented at the review step. Allow users to edit information directly in the review step.</li>
+                            <li>Use inline-editing at the review step, or editing in a page overlay in the review step</li>
+                            <li>Allow 'products' quantity to be editable</li>
+                            <li>Allow 'contact information' to be editable</li>
+                            <li>Delivery address, shipping method and payment information are suitable to be presented in an overlay. Clicking back should exit the overlay.</li>
+                            <li>If users are forced to go backwards in the checkout flow to edit data, then at least ensure they wont have to go through a number of irrelevant checkout steps when moving forward again. Redirect them back to step they were at previously.</li>
+                           </ol>
+                         </p>
+                         <img src="img/552.jpg">
+                         </div>
+
+                         <button class="accordion">#556: Have a 'Place Order' button above the fold at the review step<span class="priority">Essential</span></button>
+                        <div class="panel">
+                         <p>ISSUE: Some users misinterpret the review step for the confirmation step and, therefore, leave the checkout before confirming their purchase.
+                         </p>
+                         <p>11.6% of users misinterpret a review step for a confirmation step. As a result, they left the checkout without having placed their order.
+                         </p>
+                         <p>
+                           RECOMMENDATION:
+                          <ol>
+                            <li>Place the "Place order" button above the fold and make it highly visible.</li>
+                            <li>The primary button placement must be consistent thoughout the checkout flow. If the primary button has a specific placement thoughout the checkout process, users are likely to expect to find it in the same location.</li>
+                            <li>The confirmation step must be included in the checkout process steps</li>
+                           </ol>
+                         </p>
+                         <img src="img/556.jpg">
+                         </div>
+
+                         <button class="accordion">#545: Optimise the review step for skimming<span class="priority">Essential</span></button>
+                         <div class="panel">
+                          <p>ISSUE: Around half of users merely skim the review step and are often distracted by new order information and non-order content.
+                          </p>
+                          <p>Most users take a quick glance at information at the review step. The review step should only ever contain information they have seen before.
+                          </p>
+                          <p>
+                            RECOMMENDATION:
+                           <ol>
+                             <li>Never show hidden costs in the review order step, as users will feel tricked</li>
+                             <li>Do not draw users attention away from clicking "Place order" with other parts on the page. Keep information at a minimum. Delivery date, address and payment method.</li>
+                            </ol>
+                          </p>
+                          <img src="img/556.jpg">
+                          </div>
+
+                          <button class="accordion">#551: What information to display at the 'Order review' step<span class="priority impactful">Impactful</span></button>
+                          <div class="panel">
+                           <p>ISSUE: Users rely on the order review step to catch errors with their previously typed data and selections but won’t be able to review their information if it isn’t provided, or if it is provided but is hard to scan.
+                           </p>
+                           <p>Order review saves users from making errors before purchasing.
+                           </p>
+                           <p>
+                             RECOMMENDATION:
+                            <ol>
+                              <li>Delivery date (estimated arrival date).</li>
+                              <li>Delivery address: broken into multiple lines. Include the user's email. Auto-format the phone number</li>
+                              <li>Payment details: display credit card logo, display last 4 digits of card "ending in 1234", the expiry date</li>
+                              <li>Product extras and total cost: cost breakdown, order total the most prominent price.Tooltips for fees</li>
+                              <li>Products being ordered: have thumbails for all products, include product title, display quantities (with editing ability)</li>
+                             </ol>
+                           </p>
+                           <img src="img/551.jpg">
+                           </div>
+
+                           <button class="accordion">#553: Have 'Edit' links in close proximity to each semantic group<span class="priority detail">Detail</span></button>
+                           <div class="panel">
+                            <p>ISSUE: It’s more difficult to correct errors at the review step when it’s unclear how to edit the specific piece of user or order information that’s incorrect.
+                            </p>
+                            <p>Users are prone to making errors in the checkout flow.
+                            </p>
+                            <p>
+                              RECOMMENDATION:
+                             <ol>
+                               <li>Use 'Edit' links inline next to each information group</li>
+                              
+                              </ol>
+                            </p>
+                            <img src="img/553.jpg">
+                            </div>
+                        
+                        </div>
+
+
+
+
+                         <button class="accordion">Order confirmation & email (4)</button>
+                         <div class="panel">
+
+                          <button class="accordion">#599: The Confirmation step must provide exact details on the confirmation email<span class="priority">Essential</span></button>
+                          <div class="panel">
+                           <p>ISSUE: Users rely on the confirmation email to serve as an order receipt and worry if they don’t receive it within 1–2 minutes of submitting their order.
+                           </p>
+                           <p>After users have placed their order, they will see a confirmation page. The majority of users expect a confirmation email to arrive. Most users will keep open the order confirmation page until the email has arrived. 
+                           </p>
+                           <p>
+                             RECOMMENDATION:
+                            <ol>
+                              <li>On the Order Confirmation page, give details of the confirmation email: where the email is being sent, when to expect the email, and what to do if you dont receive the email</li>
+                              <li>On the Order Confirmation page, display the email the confirmation has been sent to</li>
+                              <li>Provide a specific time indication or range when users can expect to receive the email, like "Your confirmation email will arrive within the next 2 minutes"</li>
+                              <li>Consider having a time-based prompt on the confirmation step. After 2 minutes you could ask "Have you received your confirmation email yet?" with an option to re-send.</li>
+                             </ol>
+                           </p>
+                           <img src="img/599.jpg">
+                           </div>
+
+                           <button class="accordion">#596: Display the full order details on the confirmation step<span class="priority detail">Detail</span></button>
+                           <div class="panel">
+                            <p>ISSUE: Users will sometimes have to rely on the confirmation step (and not the email) as their proof of purchase, and missing order information on the confirmation step makes this difficult.
+                            </p>
+                            <p>The order details page is extremely important for users who have placed an expensive order. First, the confirmation step should tell users their order has been successfully completed. 
+                            </p>
+                            <p>
+                              RECOMMENDATION:
+                             <ol>
+                               <li>Prioritise the information on the Order Confirmation page. Auxiliary options or ads should not be more dominant than actual order information.</li>
+                                <li>Information on the confirmation page should be:<br>
+                                - A clear confirmatory "Thank you" message<br>
+                                - The order number<br>
+                                - The items that were ordered<br>
+                                - Estimated order arrival date or date range<br>
+                                - The address the item is going to be shipping to<br>
+                                - The total cost of the order<br>
+                                - The payment method used, including any gift cards or promos<br>
+                                - Information on when the confirmation email will arrive in user's inbox </li>
+                              </ol>
+                            </p>
+                            <img src="img/599.jpg">
+                            <img src="img/596.jpg">
+                            </div>
+
+                            <button class="accordion">#598: Provide auxiliary actions at the confirmation step<span class="priority detail">Detail</span></button>
+                            <div class="panel">
+                             <p>ISSUE: Confirmation steps can be dead ends, which encourages users to just leave the site.
+                             </p>
+                             <p>On the order confirmation step, users have many different goals. Some will continue exploring the site. whilst orders want to save the page as a record of their purchase.
+                             </p>
+                             <p>
+                               RECOMMENDATION:
+                              <ol>
+                                <li>After primary information is provided, present auxiliary options. For example: Printing or saving the confirmation page, a sign out option</li>
+                                <li>Provide non-order complimentary (auxiliary) actions on the confirmation step, such as:<br>
+                                - Account creation, by entering a password<br>
+                                - Surveys<br>
+                                - Contine shopping option</li>
+                               </ol>
+                             </p>
+                             </div>
+
+                             <button class="accordion">#597: Include the full order details in the confirmation email<span class="priority detail">Detail</span></button>
+                            <div class="panel">
+                             <p>ISSUE: Users cannot use the order confirmation email as their proof of purchase if it doesn’t contain all order information.
+                             </p>
+                             <p>Order confirmation emails serve different purposes: 1) Lets them know the order was successfully placed, 2) Lets them know how or when they can track their order, 3) Acts as proof of purchase in the event of order issues, 4) Acts as a receipt
+                             </p>
+                             <p>
+                               RECOMMENDATION:
+                              <ol>
+                                <li>In the order confirmation email, contain the same information as in the confirmation page</li>
+                                <li>Include in the order confirmation email:<br>
+                                  - Order number<br>
+                                  - Estimated date or date range the items are due to arrive<br>
+                                  - Shipping or tracking link<br>
+                                  - Items that were ordered<br>
+                                  - Address the item is shipping to<br>
+                                  - Total cost of the order<br>
+                                  - Payment method used, including applied gift cards or promotional cards<br>
+                                  - A link to the site with order details</li>
+                               </ol>
+                             </p>
+                             </div>
+                          
+                          </div>
+
+
+
+                            <button class="accordion">Form & page design (10)</button>
+                            <div class="panel">
+                              <button class="accordion">#606: Use a 'Enclosed checkout' design<span class="priority">Essential</span></button>
+                              <div class="panel">
+                               <p>ISSUE: Users are distracted in the checkout process by dominant non-checkout elements such as the main site navigation.
+                               </p>
+                               <p>During checkout, the number of elements shown to users should be reduced to a minimum to allow them to focus on completing the flow. 
+                               </p>
+                               <p>
+                                 RECOMMENDATION:
+                                <ol>
+                                  <li>When in the actual checkout, remove the header navigation and other non-checkout related elements. This give an enclosed checkout. An enclosed checkout can improve checkout conversion between 3-10%</li>
+                                  <li>Use a simpflified header, that still has escape routes: primary branding logo (that links to the homepage), basket stepper</li>
+                                  <li>In the simplified header, have the basket icon to remind users of the total and number of items</li>
+                                  <li>In the simplified header, have the user's signed-in status so the user can verify they are signed in</li>
+                                  <li>Re-enable the main site navigation at the order confirmation step, when the order is secured.</li>
+                                 </ol>
+                               </p>
+                               
+                               </div>
+
+                               <button class="accordion">#730: Ensure the primary button is uniquely styled, consistently placed and descriptively named<span class="priority">Essential</span></button>
+                              <div class="panel">
+                               <p>ISSUE: Users often don’t read button microcopy and rely purely on visual cues to determine what is the primary button — which can be problematic if the button’s visual design doesn’t match the importance of its function.
+                               </p>
+                               <p>The primary button is for proceeding to the next step in the checkout flow. Users need to visually distinguish the primary button. 
+                               </p>
+                               <p>
+                                 RECOMMENDATION:
+                                <ol>
+                                  <li>Give a primary button unique styling to stand out from other buttons</li>
+                                  <li>Consistently place the position of primary buttons. Inconsistent placement causes users to overlook the primary buttons.</li>
+                                  <li>Use explicit labels for primary buttons in checkout (ie. "Continue to Review Order")</li>
+                                  <li>Match microcopy to primary button actions and paths</li>
+                                  <li>There should only be 1 primary button. Avoid using 2 primary buttons.</li>
+                                  <li>Have a primary button above the fold at the review step.</li>
+                                 </ol>
+                               </p>
+                               <img src="img/586.jpg">
+                               </div>
+
+                               <button class="accordion">#668: Minimise the number of form fields users see by default<span class="priority impactful">Impactful</span></button>
+                              <div class="panel">
+                               <p>ISSUE: Users are intimidated when seeing a large amount of form fields.
+                               </p>
+                               <p>When users are presented with 10-15 form fields or more within the same viewport, they are overwhelmed. 23% of users have abandoned a checkout that was too long.
+                               </p>
+                               <p>
+                                 RECOMMENDATION:
+                                <ol>
+                                  <li>An entire checkout flow can be as short as:<br>
+                                  1) Full name<br>
+                                  2) Email<br>
+                                  3) Opt-in newsletter checkbox<br>
+                                  4) Address Line 1 (address line 2 + coupon code collapsed behind a link)<br>
+                                  5) Postcode<br>
+                                  6) Country (preselected via geotargeting<br>
+                                  7) A prechecked "Billing=shiping address" checkbox<br>
+                                  8) Shipping selector radio buttons<br>
+                                  9) Credit card number (card type autodetected)<br>
+                                  10) Expiry date dropdowns<br>
+                                  11) Security code</li>
+                                  <li>Grouping information in sections chunks information and makes it easier to understand</li>
+                                 </ol>
+                               </p>
+                               </div>
+
+                               <button class="accordion">#733: Avoid multi-column form layouts<span class="priority">Essential</span></button>
+                              <div class="panel">
+                               <p>ISSUE: Users have a very difficult time correctly understanding the relationship between form fields in two columns.
+                               </p>
+                               <p>Users accidently skip or overlook forms if they are multi-column.
+                               </p>
+                               <p>
+                                 RECOMMENDATION:
+                                <ol>
+                                  <li>Use a single-column layout for form fields</li>
+                                  <li>Only use multi-columns for payment (ie. Expiry + Security code)</li>
+                                 </ol>
+                               </p>
+                               <img src="img/733.jpg">
+                               </div>
+
+                               <button class="accordion">#679: Be cautious when using CAPTCHAs, and never validate casing<span class="priority">Essential</span></button>
+                              <div class="panel">
+                               <p>ISSUE: CAPTCHAs have a high failure rate among users, and can easily lead to site abandonment.
+                               </p>
+                               <p>Some websites, to protect against automated or manual brute force attacks, have a CAPTCHA to frequent requests. CAPTCHAs frustrate users.
+                               </p>
+                               <p>
+                                 RECOMMENDATION:
+                                <ol>
+                                  <li>Avoid using CAPTCHAs completely if possible to minimise frustration and friction</li>
+                                  <li>Never distinguish between lower and uppercase letters when validating the CAPTCHA. Making the distinction between upper and lowercase can increase the failure rate by more than 300%</li>
+                                  <li>If the user gets a CAPTCHA wrong, reload just the CAPTCHA - not the whole page. Information should persist on the page</li>
+                                 </ol>
+                               </p>
+                               
+                               </div>
+
+                               <button class="accordion">#611: Each step in the checkout should have a corresponding processs step<span class="priority">Essential</span></button>
+                               <div class="panel">
+                                <p>ISSUE: Users become confused or lost if they aren’t able to match their progress in the checkout flow to the process steps displayed.
+                                </p>
+                                <p>Process steps help outline the flow of checkout.
+                                </p>
+                                <p>
+                                  RECOMMENDATION:
+                                 <ol>
+                                   <li>Always implement process steps as links</li>
+                                   <li>Consider also having process steps for:<br>
+                                  - Basket step<br>
+                                  - Account selection step<br>
+                                  - Order confirmation step<br></li>
+                                  </ol>
+                                </p>
+                                <img src="img/611.jpg">
+                                </div>
+
+                                <button class="accordion">#687: Consider providing an Order Summary on most checkout steps<span class="priority detail">Detail</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Some users feel uncertain of their order when unable to see the order details.
+
+                                 </p>
+                                 <p>58% of users use order summaries during the checkout steps when present. They help users keep track of the total order cost. When users arent given order summaries they feel uncertain about the order total.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Have an order summary in every step of the checkout, so users can see the total order cost throughout checkout</li>
+                                    <li>Display discounts and savings in the order summary cost breakdown</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/687.jpg">
+                                 </div>
+
+                                 <button class="accordion">#613: Always implement process steps as links<span class="priority detail">Detail</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users intuitively click or tap on process steps to navigate the checkout — if process steps are static text they fail to support this ingrained user behavior.
+                                 </p>
+                                 <p>Process steps guide users through the checkout flow, showing how far they're progressed and how many steps they have left. Sometimes, users may need to return to a previous step and click the process step.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Have an order summary in every step of the checkout, so users can see the total order cost throughout checkout</li>
+                                    <li>Display discounts and savings in the order summary cost breakdown</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/613.jpg">
+                                 </div>
+
+                                 <button class="accordion">#607: Visually emphasise the 'Basket' link in the global site-wide header<span class="priority impactful">Impactful</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: If it’s difficult to spot the basket at a glance, users have more difficulty accessing items that have been saved in the basket or beginning the checkout.
+                                 </p>
+                                 <p>The Basket link in the site header is vital for users. Its often where users begin the checkout process. Users can go to the basket to compare items and save items.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>In the site-wide header have a Basket link in the top-right corner.</li>
+                                    <li>Use an icon for easy recognition of a basket. Text-only links perform worse.</li>
+                                    <li>Style the Basket button in the header as primary to stand out</li>
+                                    <li>Show the number of items in the basket within the basket button.</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/607.jpg">
+                                 </div>
+
+                                 <button class="accordion">#608: Don't have 2 separate Basket and Checkout links in the main header<span class="priority impactful">Impactful</span></button>
+                                 <div class="panel">
+                                  <p>ISSUE: Checkout links in the main site-wide header are prone to be mistaken for basket links, and the two can be difficult to distinguish.
+                                  </p>
+                                  <p>Users expect to see the basket button in the main navigational site-wide header in the top-right corner. The option of having a 'Checkout' button is less consistent.
+                                  </p>
+                                  <p>
+                                    RECOMMENDATION:
+                                   <ol>
+                                     <li>Clearly distinguish the "Checkout" button from the "Basket" button.</li>
+                                     <li>Do not have a permanent Checkout button in the header, only a Basket button. Only display a Checkout button in a drop-down cart that is displayed temporarily.</li>
+                                    </ol>
+                                  </p>
+                                  </div>
+                              
+                              </div>
+
+                               <button class="accordion">User interactions & distractions (9)</button>
+                               <div class="panel">
+                                <button class="accordion">#696: Be cautious about new and unconventional features in checkout<span class="priority">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Unconventional features often cause more new checkout friction than they remove.
+                                 </p>
+                                 <p>Unconventional features or form fields cause friction to users. Neglected error states can ruin performance.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Allow auto-detected location to be overrided by the user</li>
+                                    <li>Address validators: allow users to manually type in their address if the lookup thinks its wrong</li>
+                                    <li>Avoid only using placeholder text in fields without labels. Always use labels.</li>
+                                    <li>Inline validation: avoid aggressively telling the user theres an error before they've typed</li>
+                                    <li>Ensure any unconventional feature is explained clearly via tooltips.</li>
+                                   </ol>
+                                 </p>
+                                 </div>
+
+                                 <button class="accordion">#707: Use a load indicator and update it after 20+ seconds<span class="priority essential">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users get impatient or anxious after 4-5 seconds of waiting without feedback, but in checkouts both features and steps may frequently take longer to load.
+                                 </p>
+                                 <p>Load performance should always be optimised. After 4-5 seconds of loading, users can get anxious and start clicking multiple times on buttons - causing multiple submits. 
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Display load indicators instead of showing blank screens.</li>
+                                    <li>When loading 3rd party content, such as maps, use a load indicator</li>
+                                    <li>Consider an intelligent load indicator that after 20+ seconds turns into a helpful error messge to retry, or automatic resubmit. Alternatively, after 20+ seconds, include a message to reassure users not to leave the page.</li>
+                                    <li>Having an overlay with loading indicator on top can reinforce the "processing" state to users.</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/707.jpg">
+                                 </div>
+
+                                 <button class="accordion">#609: Never disturb users with feedback requests during the checkout flow<span class="priority essential">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users are interrupted in their checkout flow when asked for feedback, surveys, or similar.
+                                 </p>
+                                 <p>When users enter the checkout flow, sites should reduce clutter and districations to a minimum. Checkout is slowed and abandoments are increased.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Do not have pop-ups for feedback requests during the checkout flow. Do not interrupt the checkout flow.</li>
+                                    <li>Having a feedback review request at the order confirmation step is better as it does not interrupt the payment flow.</li>
+                                    <li>Do not have live chat options that automatically open in an overlay.</li>
+                                   </ol>
+                                 </p>
+                                 </div>
+
+                                 <button class="accordion">#709: Limit the use of overlays to user-initiated actions<span class="priority impactful">Impactful</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users are interrupted and often ignore site-initiated overlays.
+                                 </p>
+                                 <p>Auto-initiated pop-ups cause frustration and interruption to the user's flow. Users will often completely ignore or dismiss pop-ups that are auto-initiated. Auto-initiated pop-ups ignore the usability fundamental that requires users to remain in control.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Do not have auto-initiated pop-ups. These interrupt the user's flow, distract and frustrate.</li>
+                                    <li>Instead, use user-initiated overlays that are triggered by the user. Only have user-initiated actions for triggering overlays</li>
+                                    <li>Overlays can perform well for editing address information at the order review step in the checkout</li>
+                                   </ol>
+                                 </p>
+                                 </div>
+
+                                 <button class="accordion">#726: Ensure embedded resources and 3rd-party services can't break the checkout flow<span class="priority impactful">Impactful</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users are slowed down or stopped during the checkout process due to errors caused by embedded content and 3rd-party services.
+                                 </p>
+                                 <p>During checkout, embedded content and third-party services (ie. maps, payment processors, live chat, embedded images) can be helpful, but are also prone to fail by third-party code and servers. If services dont load, users are stopped in their flow.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>If using third-party services in checkout flow, ensure there is a fallback in case it doesnt load. (ie. Skip)</li>
+                                    <li>Avoid anything that requires the user to download an extension or library (ie. Flash)</li>
+                                    <li>If images are used, be sure to include alt tags and title tags, as a fallback to the image</li>
+                                   </ol>
+                                 </p>
+                                 </div>
+
+                                 <button class="accordion">#714: Confirm that actions that manipulate data have been registered<span class="priority detail">Detail</span></button>
+                                 <div class="panel">
+                                  <p>ISSUE: Users are often unsure whether the action they just performed was registered by the site.
+                                  </p>
+                                  <p>A fundamental concept of usability is providing feedback on user actions. When users dont see visible confirmation that the system has recognised their action, they are unsure if the action was registered.
+                                  </p>
+                                  <p>
+                                    RECOMMENDATION:
+                                   <ol>
+                                     <li>Have visual confirmation when a user's action has been registered.</li>
+                                     <li>Have an indirect confirmation when applying values, such as applying a coupon code. Use a spinner when the code is being redeemed and show in the price breakdown.</li>
+                                     <li>Consider temporary colour, background highlights, font weights and symbols to make confirmations more visible to users.</li>
+                                    </ol>
+                                  </p>
+                                  <img src="img/707.jpg"><br>
+                                  <img src="img/600.jpg">
+                                  </div>
+
+                                  <button class="accordion">#727: Avoid 'Apply' buttons within a form; auto-update and highlight changes<span class="priority essential">Essential</span></button>
+                                  <div class="panel">
+                                   <p>ISSUE: Users may overlook and have difficulties understanding ‘Apply’ buttons within a form, sometimes causing data loss.
+                                   </p>
+                                   <p>'Apply', 'Update', 'Add' and similar buttons placed within a form but not being the primary button for proceeding can add friction. Sometimes the 'Apply' button could be mistaken for the step's primary button.
+                                   </p>
+                                   <p>
+                                     RECOMMENDATION:
+                                    <ol>
+                                      <li>For item quantity, avoid forcing users to click an 'Update' link when the quantity is changed. Auto-update basket changes instantly.</li>
+                                      <li>Avoid having lots of separate 'Apply' or 'Update' buttons for individual fields. Instead, use the primary continue button.</li>
+                                     </ol>
+                                   </p>
+                                   </div>
+
+                                   <button class="accordion">#713: Support the 'Back' button for navigating to any previous checkout view<span class="priority essential">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users expect the “Back” button to take them to the previous view, however, that doesn’t always align with the technical structure of a checkout flow.
+                                 </p>
+                                 <p>Users have learned to rely on the 'Back' button to save them becoming stuck on web. Users may want to go back to edit an address.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Always implement checkout process steps as links</li>
+                                    <li>For accordion checkouts, its essential the 'Back' button takes users back to the previously viewed step. 'history.pushState()' function allows a site to invoke a URL change without a page reload</li>
+                                    <li>When going 'Back' in checkout, it is essential previously entered information is stored, not deleted. Data should persist in the checkout steps.</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/613.jpg">
+                                 </div>
+
+                                 <button class="accordion">#699: Allow the 'Enter' key to submit forms<span class="priority detail">Detail</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users expect forms can be submitted by pressing the “Enter” key within an active text field.
+                                 </p>
+                                 <p>Many users use the "Enter" key to submit a form after completing and wanting to proceed.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>To make a form submittable, than can be submitted when using "Enter", the input markup should be 'input type="submit"</li>
+                                   </ol>
+                                 </p>
+                                 </div>
+                                
+                                </div>
+
+
+
+                                  <button class="accordion">Cross-sells (4)</button>
+                                  <div class="panel">
+                                    <button class="accordion">#581: Promotions and special offers should have a simple message<span class="priority essential">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: If users feel tricked by the site it can be extremely disruptive to the checkout process and potentially have long-term negative impact on the brand.
+                                 </p>
+                                 <p>Unclear or deceptive messaging during the checkout flow can leave negative user perceptions. Vaguely described promotions, or disguised subsciprtion schemes have negative long term implications.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>If offering a subscription service to save money, be transparent about what is included, and any auto-renew terms. Avoid promotions that can be percieved as deceptive</li>
+                                    <li>Do not trick users into buying something by accident. This will have long term negative effects to the brand and experience.</li>
+                                    <li>Avoid aggressive cross-sells that interrupt the flow</li>
+                                   </ol>
+                                 </p>
+                                 </div>
+
+                                 <button class="accordion">#579: Cross-selling should not distract from the checkout<span class="priority essential">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Aggressive cross-selling, even in the cart, can distract users from checking out and reflect poorly on the brand.
+                                 </p>
+                                 <p>Cross-sells and promotions should always be passive and primarily presented at the basket step. Cross-sells and promotions distract attention away from completing checkout.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Avoid aggressive cross-sells in the checkout. Instead, have a cross sell section below the basket line items.</li>
+                                    <li>Cross-sells should be passive, not aggressive. Do not obstruct the users flow.</li>
+                                    <li>Do not place cross-sells at the top of the basket, within the basket summary, or in a sidebar.</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/579.jpg">
+                                 </div>
+
+                                 <button class="accordion">#580: If needing to display special offers, use passive rather than active promotions<span class="priority impactful">Impactful</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Special offers that have to be rejected will make users come to a complete stop, and actively disrupt them in their progress of placing an order.
+                                 </p>
+                                 <p>Whilst cross-sells are often important business or commercial goals, they aren't typically user goals. If users are presented special offers during the checkout flow, they should only add minimum friction to the experience. 
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Avoid any pop-ups/overlays that interrupt and obstruct the user's flow during checkout</li>
+                                    <li>Instead of active (aggressive) cross-selling, have an embedded offer on the page which does not take precedence over the primary goal.</li>
+                                    <li>Consider having the cross-sells only on the basket page instead of checkout</li>
+                                    <li>Consider providing auxiliary actions at the confirmation step when the order has been placed, such as service offers, insurance, auto-reordering, loyalty programs or store credit cards.</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/579.jpg">
+                                 </div>
+
+                                 <button class="accordion">#578: Adapt cross-sell suggestions strongly to the user's current context<span class="priority detail">Detail</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Listing products and promotions that appear unrelated to the user erodes their confidence in the site and all of its cross-sell recommendations – even relevant ones.
+                                 </p>
+                                 <p>Personalisation and the ability to track user behaviour gives retailers the ability to offer product suggestions that enhance the user's shopping experience, while improving revenue. Suggestions of irrelevant products are distracting and damaging to the user's perception of a site.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Compatibility suggestions are relevant and helpful. For example, a toy that requires batteries to operate, or mobile phone with protective cases. Relevant for context.</li>
+                                    <li>Users expect cross-sell suggestions featured below their cart or shown right after a product was added to the cart are highly related to the item(s) they just added.</li>
+                                    <li>Improve the product suggestion relevance by understanding user behaviour (ie. user's history, purchase history, current items in cart)</li>
+                                    <li>Have logic to show promotions like credit card offers and free shipping tiers when users reach a meaningful order level.</li>
+                                    <li>Have clear labels that define suggested products (ie. "You might also like", "Items related to your basket", "Recommended for you" )</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/578.jpg">
+                                 </div>
+                                    
+                                    </div>
+
+                                     <button class="accordion">Validation errors & data persistence (10)</button>
+                                     <div class="panel">
+                                      <button class="accordion">#720: Always preserve user's input on errors<span class="priority essential">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Losing or clearing typed inputs due to a validation error results in extreme user frustration.
+                                 </p>
+                                 <p>Filling out forms can be time-consuming for users. When a user enters data into a form, every effort should be made to preserve that data. Avoid data loss on validation errors or due to technical issues. For some users, the prospect of re-entering data will make them abandon.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Avoid 'forgetting' user selections in form elements (ie. checkboxes and radio buttons). This can lead to mistrust if they original selection was unselected. Always retain user selections.</li>
+                                    <li>Persist data that is typed into forms in case of technical issues that could cause data loss.</li>
+                                    <li>One approach to store user input (as they type it) is server-side, so previous form states can be prefilled if a page is reloaded.</li>
+                                    <li>Another approach is client-side storage, such as 'localStorage', that can be used to persist the form state. The benefit of client-side storage is it doesnt depend on communication with the server, so data can be persisted even if the user loses internet connection. However, the downside is client-side storage is vulnerable to Cross-site-scripting attacks. Local information should be cleared after the checkout process</li>
+                                   </ol>
+                                 </p>
+                                 </div>
+
+                                 <button class="accordion">#723: Retaining data in sensitive credit card fields<span class="priority">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Requiring users to retype cleared information after an error has occurred in a form results in great frustration, especially for error prone inputs like card numbers.
+                                 </p>
+                                 <p>Persisting data in fields that require a high level of security, like embedded credit card fields, is challenging. Due to PCI complicance, a merchant is not allowed to store credit card information temporarily. The most problematic and avoidable issue happens when non-sensitive fields cause sensitive fields to lose their data. 
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Avoid having to force users to re-type their payment details because of an error</li>
+                                    <li>Dual-stage error handling: When users submit a payment page, first check the validity of all the non-sensitive fields in the front-end (non-payment fields). The form is not submitted and the page doesnt have to reload. Only when non-sensitive fields are confirmed to be valid, do we submit the entire page and payment data in our regular payment processing gateway.</li>
+                                    <li>Live inline validation errors will greatly reduce the issue. As users are alerted to their incorrect input, the risk of them proceeding to submit the payment page is reduced.</li>
+                                    <li>Split the checkout step: Ensure that all or nearly all non-sensitive fields are presented at other checkout steps, so only sensitive fields are on the payment step</li>
+                                    <li>Consider using Luhn validation for a quick inline validation of the card number on the front-end, before it is submitted</li>
+                                   </ol>
+                                 </p>
+                                 </div>
+
+                                 <button class="accordion">#722: Use 'adaptive error messages' that match the user's specific subissue<span class="priority essential">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Generic validation errors do little to help users understand, let alone correct, the validation error.
+                                 </p>
+                                 <p>Minimise the number of users who experience validation errors, by indicating both required and optional fields, providing explanatory text or tooltips, and showing input masks. Make it easy for users to recover from errors. Error recovery experience is vital.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Give users with specific information to correct their errors. Avoid generic error message wording. Give specific instruction how to resolve their error.</li>
+                                   </ol>
+                                 </p>
+                                 </div>
+
+                                 <button class="accordion">#719: How to introduce, position and style error messages<span class="priority">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users must be able to understand that an error occurred and exactly which fields caused it in order to resolve the error.
+                                 </p>
+                                 <p>During checkout, users often have errors. What is key is the user's error-recovery experience. First, users need to understand an error occured, what input(s) caused the issue, and what they need to do to resolve the error.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Make the user understand that something went wrong and there are incorrect inputs somewhere on the page they need to correct.</li>
+                                    <li>Enable the user to easily spot and understand which field(s) are incorrect</li>
+                                    <li>Give concise instructions on how to fix the error</li>
+                                    <li>For long pages with multiple errors, consider scrolling users to the top of the page, with an information banner (ie. "Please review these errors") at the top. Use anchor links that scroll to the correct section for the error.</li>
+                                    <li>When an error has been resolved, use live validation to not show the error message any longer.</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/719.jpg">
+                                 <img src="img/719a.jpg">
+                                 </div>
+
+                                 <button class="accordion">#721: Check credit card validity as users submit the payment step, not when submitting the order<span class="priority impactful">Impactful</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Not providing credit card validation errors at the payment step, or during the checkout flow, causes users to redo part or the entire checkout flow, and can be potentially damaging to a site’s credibility.
+                                 </p>
+                                 <p>When a user has entered their credit card info, and successfully proceed to the order review step, most will assume there are no errors. Validating too late on can result in users having to go backwards in the checkout flow, reinterpret the page, try to understand their errors and fix.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Verify the payment information before the final submition of order in a 'payment step'.</li>
+                                    <li>Never show users the order confirmation page if their payment details failed to validate. At minimum, validate when users submit the order</li>
+                                    <li>When credit cards are declined, give adaptive (specific) error messages that state the exact issue.</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/721.jpg">
+                                 <img src="img/721a.jpg">
+                                 </div>
+
+                                 <button class="accordion">#718: Use inline validation, with advanced 'live' logic<span class="priority">Essential</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Being confronted with errors minutes after they’ve occurred makes it needlessly inefficient for users to spot and correct them.
+                                 </p>
+                                 <p>Along with clear error message styling, adaptive error messages, an important well-performing pattern is using live inline validation. This improves the error-recovery experience. By using inline validation, users are informed of the error immediately instead at the end of the page. Because users are alerted immediately to the error, they can resolve quickly.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li><b>Avoid premature inline validation</b><br>Overly aggressive validation that happens whilst the user types should be avoided. This causes unnecessary alarm and distrupts the user flow. Consider doing inline validation when the user leaves the field (onBlur event)</li>
+                                    <li><b>Remove live error messages when corrected</b><br>When an error has occurred, an inline error message is shown, when the user corrects the error remove the error message. The logic for rechecking the validity of the incorrect field should not only happen as users leave the field. The error message must live update on a keystoke level, the moment users enter a valid input.</li>
+                                    <li><b>Use positive inline validation</b><br>Consider telling users when they have entered something correctly. Positive validation adds a sense of reassurance and progression to the typing process.</li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/719.jpg">
+                                 <img src="img/718a.jpg">
+                                 </div>
+
+                                 <button class="accordion">#625: Have an address validator<span class="priority impactful">Impactful</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Unnoticed errors of just a few mistyped characters in an address can cause serious delivery issues.
+                                 </p>
+                                 <p>An address validator functions by queurying an address database to ensure the address the user typed mathces the address the service has on file. It is more efficient to check and validate a user's address before the order is finalised. This allows users to correct any mistakes.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Use an address verification to prevent orders being submitted with incorrect address information. This is needed more for mobile users where there is a higher chance or user-input-error. </li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/625.jpg" class="img-large">
+                                 </div>
+
+                                 <button class="accordion">#626: Allow users to override the address validator, but clarify the consequences<span class="priority impactful">Impactful</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users are unable to complete the checkout if faced with erroneous address-validation errors.
+                                 </p>
+                                 <p>An address validator is a helpful for reducing the number of orders placed with an address that contains errors. However, sometimes the address validator can fail, so an option to proceed through any address-validation errors is important. 
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Allow users to proceed through any address-validation. In the case of an 
+                                      address not being validated, it is still best to let the order go through instead of blocking checkout. </li>
+                                      <li>Clarify why an address must be verified with micocopy (ie. "To ensure accurate delivery, please consider the changes highlighted below") </li>
+                                   </ol>
+                                 </p>
+                                 <img src="img/626.jpg" class="img-large">
+                                 </div>
+
+                                 <button class="accordion">#627: Highlight the address validator's suggested changes<span class="priority detail">Detail</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users often have trouble seeing the difference between the suggested edits and the addresses they’ve inputted.
+                                 </p>
+                                 <p>Address validators perform better when they show the differences between what the user had typed, and what the site was suggested are clearly emphasised. This helps users understand the purpose of the address validator, but more importantly increase the number of users who select the correct path for proceeding. 
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>On the address verification, clearly show the differences between what the user typed and what is suggested. Highlight the differences with bold, or other styling. </li>
+                                     
+                                   </ol>
+                                 </p>
+                                 <img src="img/625.jpg" class="img-large">
+                                 </div>
+
+                                 <button class="accordion">#629: Autocorrect minor address errors<span class="priority detail">Detail</span></button>
+                                <div class="panel">
+                                 <p>ISSUE: Users are unnecessarily slowed down and feel intimidated by overly sensitive address validators.
+                                 </p>
+                                 <p>Address validators purpose is to make sure users have entered an address that will not cause delivery issues. However, address verification can be difficult for users to understand. Users should always be able to proceed to finish checkout without being blocked by the address validation.
+                                 </p>
+                                 <p>
+                                   RECOMMENDATION:
+                                  <ol>
+                                    <li>Auto-correct safe minor errors on the user's behalf, such as: <br>
+                                    - Close misspellings of city names<br>
+                                    - Differences in capitalisation<br>
+                                    - Added periods or other punctuation<br>
+                                    - Preferred abbreviations<br>
+                                    - Full words instead of abbreviations<br>
+                                    - Minor issues of missing information</li>
+                                     
+                                   </ol>
+                                 </p>
+                                 </div>
+
+
+                                 
+
+                                      </div>
+
+                                        <button class="accordion">Field labels & microcopy (7)</button>
+                                        <div class="panel">
+                                         <button class="accordion">#637: Provide a 'guest checkout' option<span class="priority">Essential</span></button>
+                                         <div class="panel">
+                                           </div></div>
+
+                                           <button class="accordion">Field design & features (8)</button>
+                                           <div class="panel">
+                                            <button class="accordion">#637: Provide a 'guest checkout' option<span class="priority">Essential</span></button>
+                                            <div class="panel">
+                                              </div></div>
+
+                                              <button class="accordion">Default values & autocompletion (8)</button>
+                                           <div class="panel">
+                                            <button class="accordion">#637: Provide a 'guest checkout' option<span class="priority">Essential</span></button>
+                                            <div class="panel">
+                                              </div></div>
+
+    </section>
+
+
+    <section class="account">
+        <h2>Account</h2>
+  
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+
+
+    
+    <footer>
+       
+    </footer>
+</body>
+    
+</html>

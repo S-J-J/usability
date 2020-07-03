@@ -1914,21 +1914,75 @@
                                     - Preferred abbreviations<br>
                                     - Full words instead of abbreviations<br>
                                     - Minor issues of missing information</li>
-                                     
                                    </ol>
                                  </p>
                                  </div>
-
-
                                  
-
                                       </div>
 
                                         <button class="accordion">Field labels & microcopy (7)</button>
                                         <div class="panel">
-                                         <button class="accordion">#637: Provide a 'guest checkout' option<span class="priority">Essential</span></button>
-                                         <div class="panel">
-                                           </div></div>
+                                          <button class="accordion">#686: Mark both required and optional fields explicitly<span class="priority">Essential</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: Optional fields can be misinterpreted as required and vice versa unless both types are explicitly indicated — causing severe form-filling friction.
+                                           </p>
+                                           <p>What information users are required to provide during a checkout flow are highly inconsistent across sites. To prevent users having to guess and infer what information is required, it should be explicit. Ideally, optional fields should be removed.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>Explicity mark if each field is required or optional. Required fields can be denoted with an asterisk, and optional ones with an "(Optional)" mark. Users can progress more efficiently entering forms by understanding required information.</li>
+                                             </ol>
+                                           </p>
+                                           <img src="img/686.jpg">
+                                           </div>
+
+
+                                           <button class="accordion">#683: Avoid just using placeholder text as input labels<span class="priority">Essential</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: When the label disappears as the user starts typing, errors become difficult to correct and users sometimes forget what they are supposed to enter.
+                                           </p>
+                                           <p>Placeholders being used as input labels presents a problem when users enter the field. Without an input label, the user must rely on their memory to remember what the input is for. 
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>Avoid using input placeholder text as an input label. This is poor usability when a user starts typing (as the input label disappears). Placeholder text should not be used as the primary label</li>
+                                              <li>Always have an input label above the input.</li>
+                                             </ol>
+                                           </p>
+                                           <img src="img/686.jpg">
+                                           </div>
+
+
+                                           <button class="accordion">#681: Provide tooltips for unconventional features, fields or selections<span class="priority">Essential</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: Additional feature and field explanations are often needed by some users, yet can take unnecessary focus for users who don’t need them.
+                                           </p>
+                                           <p>Many input fields in a checkout form are straightforward - ie. full name, address. However, some inputs will be more unfamiliar or irrelevant. Unfamiliar fields can present a roadblock, or abandonment, for some users' progression through the checkout flow. Field descriptions and tooltip text are observed to help users gain context.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>For more ambigous input fields, use a tooltip or text to give some context. Any field description should be brief to reduce visual noise.</li>
+                                              <li><b>Examples of input fields that may need more context:</b><br>
+                                              - Special feature fields (gift reminders, ship to store, pay with multiple cards<br>
+                                              - Fields that have common names (ie. "Rewards number", "Member number"<br>
+                                              - Fields that involve storing data or managing account features (ie. "Preferred address", "Express Checkout"</li>
+                                              <li>If a tooltip is to be used, implementation must be careful about it's placement. A tooltip should not obstruct the view of the field or selection.</li>
+                                              <li>Consider using a "Learn more" text link close by to the field. </li>
+                                              <li>On desktop, an alternative to using tooltips is to use native HTML "title" attribute for features initialed by a link or button. However, it is not immediately obvious to users that there is extra information displayed on hover. </li>
+                                             </ol>
+                                           </p>
+                                           <img src="img/584.jpg">
+                                           <img src="img/588.jpg">
+                                           <img src="img/681.jpg">
+                                           </div>
+
+                                          
+                                          </div>
+
+
 
                                            <button class="accordion">Field design & features (8)</button>
                                            <div class="panel">

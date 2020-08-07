@@ -2050,17 +2050,144 @@
                                              </ol>
                                            </p>
                                            </div>
-
-                                          
                                           </div>
 
 
 
                                            <button class="accordion">Field design & features (8)</button>
                                            <div class="panel">
-                                            <button class="accordion">#637: Provide a 'guest checkout' option<span class="priority">Essential</span></button>
+                                            <button class="accordion">#674: Choosing the right interface type for optional inputs<span class="priority">Essential</span></button>
                                             <div class="panel">
-                                              </div></div>
+                                              <p>ISSUE: Depending on the optional information asked for, some interface types cause needless friction.
+
+                                              </p>
+                                              <p>Most e-commerce checkouts have a number of optional inputs and selections. All optional inputs should be closely examined if they are truely needed at all. Ideally, forms should be reduced as much as possible, with only essential fields. Optional fields add to friction and form complexity - making it 5-30% slower to complete.
+                                              </p>
+                                              <p>
+                                                RECOMMENDATION:
+                                               <ol>
+                                                 <li><b>Optional inputs</b><br>
+                                                  - Reduce optional inputs as much as possible. Optional inputs are best suited for:<br>
+                                                - Optional phone number<br>
+                                                - Optional password field(s) during delayed account creation. </li><br>
+                                                <li><b>Checkboxes</b><br>
+                                                   - Checkboxes are best when users can say "yes or no"<br>
+                                                   - Use checkbox for opting in/out questions<br>
+                                                   - Checkboxes perform best for newsletter opt-in, up-sell opt-ins and for choosing "Shipping address = billing address"<br>
+                                                   - Avoid hiding optional inputs behind a checkbox and instead hide them behind an "Add" link.
+                                                </li><br>
+                                                <li><b>Optional form fields behind link</b><br>
+                                                  - Optional form fields can be hidden behind an "Add" link, for example:<br> 
+                                                  "<u>+ Add delivery instructions</u>"<br>
+                                                  "<u>+ Add company name</u>"<br>
+                                                  "<u>+ Add gift message</u>"<br>
+                                                  "<u>+ Add address line 2</u>"<br>
+                                                  "<u>+ Add Coupon code</u>"<br>
+                                                  "<u>+ Add Gift card</u>"<br>
+                                               </li><br>
+                                               <li><b>Radio buttons</b><br>
+                                                - Radio buttons are best for only required inputs with a default selection (ie. delivery method, payment method) - not optional inputs. Avoid radio buttons for optional inputs<br>
+                                                - An alternative to marking radio buttons as optional is having an option value of "Rather not say". However, radio buttons are still not best for optional content.<br>
+                                                - Radio buttons work best when there are 2-5 options. However, if its only a yes/no question, a checkbox would be better.
+                                             </li><br>
+                                             <li><b>Drop-downs</b><br>
+                                              - Drop downs hide their values within - which presents issues hiding content<br> 
+                                              - If there are only a few options, a drop-down will nearly always be a poor interface choice because of the friction created by not giving enough information. A radio selection would be simpler as all options are visible.<br>
+                                              - If there are more than 5-7 options, but the input doesn't have to be validated, an open text form field will often be simpler than a drop-down, as users <br>
+                                              - Avoid drop-downs for country selectors, which cause issues for users attempting to navigate them.<br>
+                                              - Avoid using an inline placeholder label option "Please Select". Which makes the drop-down read as a required input.<br>
+                                              - Best used only for required inputs with a high number of options.<br>
+                                           </li><br>
+                                                </ol>
+                                              </p>
+                                              </div>
+
+
+                                              <button class="accordion">#659: Be very cautious with restricting field input characters and formatting<span class="priority impactful">Impactful</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: Restricting field input characters can lead to errors and reduce user’s’ ability to correct those errors.
+
+                                           </p>
+                                           <p>Repeatedly in testing, users interpret fields and type information into fields in different ways. For example, for card numbers or phone numbers some users will type spaces (ie. 4444 4444 4444 4444). Restricting certain characters from being typed presents usability issues.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>Support different ways of inputing information, and have logic for cleaning up the dataset on the backend. </li>
+                                              <li>Support different formats, like upper and lowercase. Support typed spaces, hypens (-)</li>
+                                              <li>If input restrictions are really needed, be sure to provide a clear formatting example, to pre-empt validation errors. </li>
+                                             </ol>
+                                           </p>
+                                           </div>
+
+                                           
+                                           <button class="accordion">#669: Be very cautious when using custom designed selection UI<span class="priority impactful">Impactful</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: Custom designed UI elements can confuse or distract users when they do not behave as expected (i.e. as their native counterpart).
+
+                                           </p>
+                                           <p>Implementing customer-designed UI can present issues compared to native selection UI.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>Before switching to custom-UI, check if it can be handled natively instead. Custom-UI can have usability and browser compatibility issues.</li>
+                                              <li>Ensure any custom-UI is keyboard-focus friendly, so it can be tabbed to.</li>
+                                              <li>Consider using a "Shell Approach", whereby the components are styled, but open natively. (ie. A custom dropdown that opens to use native drop-down. This saves time over-developing custom components, better compatiblity with older devices and browsers.
+                                              </li>
+                                              <li>Custom UI can be best used for main navigation, filtering options</li>
+                                             </ol>
+                                           </p>
+                                           <img src="img/669.jpg">
+                                           </div>
+
+
+                                           <button class="accordion">#660: The hit areas for checkbox and radio buttons should include the associated labels<span class="priority essential">Essential</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: Users assume they can click the text associated with radio buttons and checkboxes, and, hence, are likely to overlook unsuccessful selections.
+
+                                           </p>
+                                           <p>It is essential for checkboxes and radio selects that the label is included in the hit area. Labels should be included in the hit area to avoid unregistered selections.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>For a checkbox or radio select, always include the label in the hit area. Clicking the label should also register the select.</li>
+                                             </ol>
+                                           </p>
+                                           <img src="img/660.jpg">
+                                           </div>
+
+
+                                           <button class="accordion">#658: Use localised input masks for restricted inputs<span class="priority detail">Detail</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: When faced with a field with formatting requirements or character restrictions, users are often hesitant or confused about how to proceed correctly.
+
+                                           </p>
+                                           <p>Users are likely to input numerical inputs in several different way - even if formatting examples are displayed. Always be cautious about restricting users' inputs. Input masks perform well if implemented correctly. Input masking removes users' confusion about what format is required for restricted inputs.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>Use input masks for restricted inputs. Give indication of an input mask in the input placeholder</li>
+                                              <li>Ensure inputs are localised (ie. for US the date format is MM/DD/YY, in the UK the date format is DD/MM/YY). Ensure the placeholder is localised.</li>
+                                              <li>Only use input masking where the data is certain to be a specific length. If not absolutely sure of the correct regional formatting, or the target audience is too small, use a traditional form field without any input restrictions.</li>
+                                             </ol>
+                                           </p>
+                                           <img src="img/616.jpg">
+                                           </div>
+
+
+                                           
+                                            </div>
+
+
+                                            
+                                            </div>
+
+
+
+
 
                                               <button class="accordion">Default values & autocompletion (8)</button>
                                            <div class="panel">

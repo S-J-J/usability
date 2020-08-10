@@ -2178,11 +2178,62 @@
                                            </div>
 
 
-                                           
+                                           <button class="accordion">#705: Ensure proximity for radio buttons through collapsed alignment or through encapsulation<span class="priority detail">Detail</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: It’s often difficult to determine how radio buttons relate to each other, as well as get an overview of the selection options.
+
+                                           </p>
+                                           <p>Radio buttons that have nested options (2nd level radio options) are prone to proximity issues with the space between parent and child radio options.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>When collapsing radio button options, it is best practice having the most popular option selected by default. Non-defaulted options are harder for users to understand alternative choices. (ie. for payment method selectors, having the option credit/debit card selected by default)</li>
+                                              <li>Displaying information within a radio button (encapsulate) can be helpful to compare multiple options. This is recommended for a delivery method radio options.</li>
+                                             </ol>
+                                           </p>
+                                           <img src="img/547.jpg">
+                                           </div>
+
+                                           <button class="accordion">#670: Drop-down values should support keyboard selection and indicate this up-front<span class="priority detail">Detail</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: Drop-down values that deviate in format or sequence from what users expect actively disrupt keyboard interactions.
+
+                                           </p>
+                                           <p>Many users try to perform selections in a dropdown using only their keyboard. A majority of users will want to tab through a form. It is almost 3 times quicker to tab through compared to using a mouse.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>Dropdowns should always be focusable so they can be tabbed through using the keyboard.</li>
+                                              <li>If using a dropdown for a country select, support that users may press a key (ie. "U") to skip to an option (ie. "United Kingdom")</li>
+                                              <li>Consider placing the most commonly selected values at the top of a drop-down. However, the value must be duplicated, not just moved to the top. It is essential any popular values at the top of the drop down are listed again in alphabetical order. An auto-complete country select is generally always recommended instead of a dropdown.</li>
+                                              <li>Dropdown placeholders should always stick to the same format of the value. (ie. for a card expiry "MM" instead of "Month").</li>
+                                             </ol>
+                                           </p>
+                                           <img src="img/670.jpg">
+                                           </div>
+
+
+                                           <button class="accordion">#663: Disable the paste functionality in any second email verification field, or remove the field entirely<span class="priority impactful">Impactful</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: Users often copy and paste email addresses into any second verification field, negating the effectiveness of this fail-safe.
+
+                                           </p>
+                                           <p>Having to ask users to type the same information twice always causes friction to users. Often a dupicated "email" field is used as the accuracy of the user's email is critical for account ID, all communication and reseting passwords.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>If a second "Confirm email address" input field is required, browser paste functionality should be disabled, to ensure users dont paste in errors. Pasting can be disabled by JavaScript "onpaste="return false;"</li>
+                                              <li>If disabling pasting in the "Confirm email" input field, consider having a small dynamic message informing users who try to paste:<br>
+                                              "To avoid typos, please retype your email in the "Confirm Email" field"</li>
+                                              <li>If not having a second verification email field, and only having 1 email field, provide front-end validation to prevent avoidable errors. </li>
+                                              <li>It is essential the user's typed email address should be displayed both at the order review step, and the order confirmation step, so users can spot any email typos.</li>
+                                             </ol>
+                                           </p>
+                                           </div>
                                             </div>
-
-
-                                            
                                             </div>
 
 
@@ -2191,9 +2242,69 @@
 
                                               <button class="accordion">Default values & autocompletion (8)</button>
                                            <div class="panel">
-                                            <button class="accordion">#637: Provide a 'guest checkout' option<span class="priority">Essential</span></button>
-                                            <div class="panel">
-                                              </div></div>
+                                            <button class="accordion">#555: Never make users perform the same selection or re-enter twice<span class="priority">Essential</span></button>
+                                          <div class="panel">
+                                           <p>ISSUE: Users will never expect the site to delete their typed input and selections — especially when there are no validation errors.
+                                           </p>
+                                           <p>Having users re-type or re-select information if the website cant persist data causes significant usability issues. Data loss often causes validation errors and user friction. Data loss often happens during checkout edit flows, after page reloads, when making other selections on the page, when adding new data to the account, going back-and-forth in the checkout, when using a preferred address or payment methods.
+                                           </p>
+                                           <p>
+                                             RECOMMENDATION:
+                                            <ol>
+                                              <li>Never 'forget' users selections or data entry. Avoid reseting inputs or going back to default. Users should never have to re-enter information or re-select options. Avoid reseting user data in edit flows.</li>
+                                              <li>Persist user-data, user-input and selections on the front-end, or if not possible, on the back-end</li>
+                                              <li>Where a new selection or typed information conflicts with a prior choice (ie. changing country will change payment details entered), consider informing users that their previous details will be overridden if they proceed.</li>
+                                             </ol>
+                                           </p>
+                                           </div>
+
+
+                                           <button class="accordion">#554: Make inferred selections based on user's previous actions<span class="priority">Essential</span></button>
+                                           <div class="panel">
+                                            <p>ISSUE: If users feel they have to ‘tell the site twice’ it leads to unnecessary inefficiencies or even orders being placed with incorrect data — not to mention users’ perception that the site is failing to intelligently respond to their actions.
+
+                                            </p>
+                                            <p>When users perform an action that clearly implies another logical selection should be made on their behalf, but are forced by the site to make the additional selection can be perceived by users as "telling the site twice". 
+                                            </p>
+                                            <p>
+                                              RECOMMENDATION:
+                                             <ol>
+                                               <li>If users apply or submit data, (ie, a new address, payment method or gift certificate) we can make a confident assumption users want to use this. Avoid having to ask users to select it again.</li>
+                                               <li>When users add a new payment card or address during checkout, its because they want to use that data for their current order. Avoid forcing users to click "Apply" or "Select" after a just-made addition.</li>
+                                               <li>There are specific contexts in which inferred selections can be made based on user's prior action. These include:<br>
+                                              -<b>The Review Step</b><br>
+                                              At the review step, it is common to have an "Edit" link. Avoid using having another "Edit" button.<br><br>
+                                              -<b>Dual-purpose buttons</b><br>
+                                              Avoid having buttons with dual names like "Add/edit"<br><br>
+                                              -<b>Third-party flows</b><br>
+                                              If third-party services are used, ensure the user's overall flow is evaluated, to ensure there's no needless friction. 
+                                            </li>
+                                            <li>If user apply a gift code, sites can also select it on the user's behalf, with a pre-selected checkbox.</li>
+                                              </ol>
+                                            </p>
+                                            <img src="img/617.jpg">
+                                            </div>
+
+
+                                            <button class="accordion">#568: Prefill related fields if a majority of users will otherwise retype them<span class="priority">Essential</span></button>
+                                           <div class="panel">
+                                            <p>ISSUE: Users find it tedious to type the same information multiple times within a few minutes, as it slows down progress through checkout and makes it appear that a site is failing to respond to their inputs in an intelligent way.
+
+                                            </p>
+                                            <p>During a checkout flow, users are often presented with different fields that often ask for information already provided. If a user has entered information, it should be prefilled for any duplicate input.
+                                            </p>
+                                            <p>
+                                              RECOMMENDATION:
+                                             <ol>
+                                               <li>If users enter data, if there are inputs asking for the same information later, prefill these inputs. Avoid forcing users to re-enter already given information as this causes friction</li>
+                                              
+                                              </ol>
+                                            </p>
+                                            <img src="img/617.jpg">
+                                            </div>
+                                            
+                                            
+                                            </div>
 
     </section>
 

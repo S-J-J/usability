@@ -2296,11 +2296,110 @@
                                             <p>
                                               RECOMMENDATION:
                                              <ol>
-                                               <li>If users enter data, if there are inputs asking for the same information later, prefill these inputs. Avoid forcing users to re-enter already given information as this causes friction</li>
-                                              
+                                               <li>If users enter data, if there are inputs asking for the same information later, prefill these inputs. Avoid forcing users to re-enter already given information as this causes friction. Common situations where inputs ask for the same information are:<br>
+                                              - Asking for email or telephone data again when reaching the delivery email or phone<br>
+                                              - Asking for the customer's name again having to be retyped when filling cardholder name<br>
+                                              - The postcode typed in a delivery calculator has to be typed again in the delivery addresss step<br>
+                                              - Email typed during newsletter sign-up (before checkout) has to be retyped as the order email during checkout </li>
+                                              <li>Ensure the "Billing address" and "Shipping address" are defaulted to be the same.</li>
                                               </ol>
                                             </p>
-                                            <img src="img/617.jpg">
+                                            </div>
+
+
+                                            <button class="accordion">#576: Personalise the user's checkout flow by hiding redundant fields and options<span class="priority">Essential</span></button>
+                                           <div class="panel">
+                                            <p>ISSUE: When completely irrelevant fields and options are displayed, users often misinterpret them, and the checkout is made needlessly complex.
+
+                                            </p>
+                                            <p>As users proceed through checkout, some inputs can be prefillled and preselected based on user's past choices. Sometimes, some checkout fields and options should be hidden or removed completely. Redundant fields should be removed from checkout.
+                                            </p>
+                                            <p>
+                                              RECOMMENDATION:
+                                             <ol>
+                                               <li><b>Hide irrelevant password field</b><br>
+                                              If using a radio option in the account-selection step (ie. Sign in vs guest vs create account), the password field will be irrelevant for all users who arent signing in. When a redundant field is shown it can be difficult for users to know if they're supposed to skip it or fill it out. Instead, hide the password field until the parent radio button is clicked (ie. to sign in)</li><br>
+                                              <li><b>Don't pre-select nonsensical shipping options</b><br>
+                                              Displaying a default selected delivery option that is both slower and more expensive than other options is nonsensical. Users can also feel 'tricked' if a more expensive option is pre-selected</li><br>
+                                              <li><b>Hide irrelevant fields for the user's credit card type</b><br>
+                                              A few credit cards require special inputs like Maestro, Solo and Switch cards (ie. "Start Date" and "Issue number". Toggle the visability of these inputs based on the autodetected card type (from the credit card IIN range)</li><br>
+                                              <li><b>Hide irrelevant options for the user's payment method</b><br>
+                                                If a payment method has been selected, hide irrelevant options (ie. If Paypal is selected, "Card number" field does not need to display</li><br>
+                                              </ol>
+                                            </p>
+                                            </div>
+
+                                            <button class="accordion">#572: Present auto-selected and pre-filled values in open input fields, not as text<span class="priority impactful">Impactful</span></button>
+                                           <div class="panel">
+                                            <p>ISSUE: Users frequently overlook pre- and auto-filled values when presented as static text.
+
+                                            </p>
+                                            <p>Several fields and values during checkout can, and should, be pre-filled for the user. This includes setting default payment and shipping methods, pre-filling information based on prior typed info, geo-targetting or country, auto-detected of city and state. However, there will be occasions when pre-filled options are incorrect. 
+                                            </p>
+                                            <p>
+                                              RECOMMENDATION:
+                                             <ol>
+                                               <li>If input fields are pre-filled, always keep the fields open (so users can overwrite information). Never display pre-filled information as static text.</li>
+                                               <li>Be careful pre-filling too many fields on a given checkout step. If pre-filled fields outweigh the empty fields, users can overlook empty fields.</li>
+                                              </ol>
+                                            </p>
+                                            <img src="img/572.jpg">
+                                            </div>
+
+
+                                            <button class="accordion">#734: Make newsletter sign-up optional and not auto-opted in by default<span class="priority impactful">Impactful</span></button>
+                                           <div class="panel">
+                                            <p>ISSUE: Most users don’t want to receive email newsletters, yet most sites by default require users to opt-out of their newsletter, rather than opt-in.
+
+                                            </p>
+                                            <p>A lot of e-commerce websites follow a dark pattern of auto opt-in newsletters or silently auto-subscribe. Dark patterns include a pre-selected checkbox for a newsletter. This can negatively affect users' perceptions of a brand or site, as many feel they've been 'tricked' into getting emails.
+                                            </p>
+                                            <p>
+                                              RECOMMENDATION:
+                                             <ol>
+                                               <li>Never auto-opt-in or pre-select options to recieving marketing newsletters or subscriptions. By default, newsletters and subscriptions should be left blank.</li>
+                                              </ol>
+                                            </p>
+                                            <img src="img/734.jpg">
+                                            </div>
+
+
+                                            <button class="accordion">#618: Optimise all checkout steps for browser auto-fill<span class="priority detail">Detail</span></button>
+                                           <div class="panel">
+                                            <p>ISSUE: When browser auto-fill is wrong, partial, or not available, users risk unknowingly submitting incorrect data, or force users to needless typing.
+
+                                            </p>
+                                            <p>Browser auto-fill can make completing a form significantly easier for users. Usability research by Google indicates that form completion time can be reduced by 30% on average when users rely on browser auto-fill to pre-fill contact, address and even credit card fields.
+                                            </p>
+                                            <p>
+                                              RECOMMENDATION:
+                                             <ol>
+                                               <li>Optimise inputs for browser auto-complete (auto-fill)<br> <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill">View autofill for more information</a>.</li>
+                                               <li>If asking users to re-type their email address, the browser auto-fill should be disabled to prevent incorrect data being copied.</li>
+                                               <li>Ensure that any hidden form fields handle browser auto-fill gracefully. Form fields should autofill data <i>even</i> if hidden.</li>
+                                              </ol>
+                                            </p>
+                                            <img src="img/618.jpg">
+                                            </div>
+
+
+                                            <button class="accordion">#571: Remove select features when there's only one option left<span class="priority detail">Detail</span></button>
+                                           <div class="panel">
+                                            <p>ISSUE: Users are confused when interfaces indicate a choice when there isn’t any choice to be made.
+
+                                            </p>
+                                            <p>When presenting users with a selection interface, like a drop-down or set of radio buttons, there is a usability issue if only 1 option is available.
+                                            </p>
+                                            <p>
+                                              RECOMMENDATION:
+                                             <ol>
+                                               <li>If there is only 1 available option, do not display as a drop-down or radio select. If only 1 option is available, do not display as selectable - instead as static text.</li>
+                                               <li>Avoid presenting disabled or unavailable (ie. sold out) options that cant be selected. This only frustrates users with an unselectable option.</li>
+                                               
+                                              </ol>
+                                            </p>
+                                            <img src="img/547.jpg">
+                                            <img src="img/571.jpg">
                                             </div>
                                             
                                             
